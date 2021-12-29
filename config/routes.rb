@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  namespace :manage do
-    resources :questions
-  end
+  mount RailsAdmin::Engine => '/manage', as: 'rails_admin'
 
   root 'application#index'
 end
