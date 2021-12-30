@@ -8,4 +8,9 @@
 <% end %>
 
 <p>This question is the <b><%= @question.category.title %></b> category.</p>
-<p>It has a 50% success rate.</p>
+
+<% if @question.has_been_answered %>
+<p>It has a <%= @question.success_rate %>% success rate.</p>
+<% else %>
+<p>This question has not yet been answered by anyone.</p>
+<% end %>
