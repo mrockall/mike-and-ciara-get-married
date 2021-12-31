@@ -51,6 +51,9 @@ gem "bootsnap", require: false
 # Use Rails Admin as a backend interface
 gem 'rails_admin', ['>= 3.0.0.beta2', '< 4']
 
+# Use this gem when importing questions from Google Sheets
+gem 'google_drive'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
