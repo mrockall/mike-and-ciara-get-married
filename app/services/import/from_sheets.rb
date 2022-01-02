@@ -3,14 +3,15 @@
 # Used to import the content from a Google Sheet.
 # 
 module Import
-  class QuestionsFromGoogle
-
-    def initialize
+  class FromSheets
+    def initialize(sheet_id)
       @session = setup_session
+      @sheet_id = sheet_id
     end
 
     def execute
       @session
+      puts @sheet_id
     end
 
     private
