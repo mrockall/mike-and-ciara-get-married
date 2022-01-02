@@ -1,5 +1,9 @@
 build:
   docker:
     web: Dockerfile
+release:
+  image: worker
+  command:
+    - ./bin/release-tasks.sh
 run:
   web: bundle exec puma -C config/puma.rb
