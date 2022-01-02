@@ -4,3 +4,8 @@ namespace :import do
     Import::FromSheets.new(args[:sheet_id]).execute
   end
 end
+
+desc "Imports questions from a Google Sheet."
+task :from_sheets, [:sheet_id] => :environment do |t, args|
+  Import::FromSheets.new(args[:sheet_id]).execute
+end
