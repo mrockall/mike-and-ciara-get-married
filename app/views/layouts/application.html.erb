@@ -11,7 +11,7 @@
   </head>
 
   <body class="font-serif">
-    <nav class="flex p-4">
+    <nav class="flex flex-wrap px-2 pt-2">
       <%
         links = [{
           text: 'Home',
@@ -29,10 +29,11 @@
       %>
 
       <% links.each do |link| %>
-        <%= link_to link[:text], link[:url], class: "px-3 py-2 text-stone-700 rounded-lg hover:bg-rose-100 hover:text-rose-900" %>
+        <%= link_to link[:text], link[:url], class: "px-4 py-2 text-stone-700 rounded-lg hover:bg-rose-100 hover:text-rose-900" %>
       <% end %>
     </nav>
-    <main class="container mx-auto mt-28 px-5 flex">
+
+    <main class="p-6">
       <%= yield %>
     </main>
   </body>

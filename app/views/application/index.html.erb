@@ -1,20 +1,24 @@
-<% if @question.present? %>
-  <p><%= @question.text %></p>
+<div class="pb-8">
+  <% if @question.present? %>
+    <p><%= @question.text %></p>
 
-  <% @question.answers.shuffle.each do |answer| %>
-    <form method="POST" action="/answer">
-      <input type="hidden" name="answer_id" value="<%= answer.id %>">
-      <button type="submit"><%= answer.text %></button>
-    </form>
-  <% end %>
+    <% @question.answers.shuffle.each do |answer| %>
+      <form method="POST" action="/answer">
+        <input type="hidden" name="answer_id" value="<%= answer.id %>">
+        <button type="submit"><%= answer.text %></button>
+      </form>
+    <% end %>
 
-  <p>This question is the <b><%= @question.category.title %></b> category.</p>
+    <p>This question is the <b><%= @question.category.title %></b> category.</p>
 
-  <% if @question.has_been_answered %>
-  <p>It has a <%= @question.success_rate %>% success rate.</p>
+    <% if @question.has_been_answered %>
+    <p>It has a <%= @question.success_rate %>% success rate.</p>
+    <% else %>
+    <p>This question has not yet been answered by anyone.</p>
+    <% end %>
   <% else %>
-  <p>This question has not yet been answered by anyone.</p>
+  <p>There are not yet any questions in the database.</p>
   <% end %>
-<% else %>
-<p>There are not yet any questions in the database.</p>
-<% end %>
+</div>
+
+<%= render "photo_grid/photo_grid" %>

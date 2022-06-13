@@ -1,0 +1,9 @@
+<% 
+  photos = ["01","02","03","04","05","06","07","08","09","10","11","12"]
+%>
+<h1>Photos</h1>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+  <% photos.shuffle.each do |photo| %>
+    <div class="text-center bg-rose-50 rounded-lg h-40 lg:h-60 2xl:h-80"><%= photo %></div>
+  <% end %>
+</div>
