@@ -10,7 +10,28 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body class="font-serif">
+    <nav class="flex p-4">
+      <%
+        links = [{
+          text: 'Home',
+          url: '/'
+        }, {
+          text: "Details of the Day", 
+          url: "/details-of-the-day"
+        }, {
+          text: "Where to Stay", 
+          url: "/where-to-stay"
+        }, {
+          text: "RSVP", 
+          url: "/rsvp"
+        }]
+      %>
+
+      <% links.each do |link| %>
+        <%= link_to link[:text], link[:url], class: "px-3 py-2 text-stone-700 rounded-lg hover:bg-rose-100 hover:text-rose-900" %>
+      <% end %>
+    </nav>
     <main class="container mx-auto mt-28 px-5 flex">
       <%= yield %>
     </main>

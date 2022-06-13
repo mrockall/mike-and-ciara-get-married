@@ -3,6 +3,18 @@ class ApplicationController < ActionController::Base
     @question = Question.order(Arel.sql('RANDOM()')).first
   end
 
+  def details_of_the_day
+    
+  end
+
+  def where_to_stay
+    
+  end
+
+  def rsvp
+    
+  end
+
   def answer
     @answer = Answer.find(params[:answer_id])
 
