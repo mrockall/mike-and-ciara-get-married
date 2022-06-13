@@ -1,9 +1,12 @@
 <% 
-  photos = ["01","02","03","04","05","06","07","08","09","10","11","12"]
+  photos = Rails.application.assets.each_file.select { |pathname| 
+    pathname.include? "photo_grid/"
+  }
 %>
 <h1>Photos</h1>
 <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
   <% photos.shuffle.each do |photo| %>
-    <div class="text-center bg-rose-50 rounded-lg h-40 lg:h-60 2xl:h-80"><%= photo %></div>
+    <% photo_url = asset_url("photo_grid/#{photo.split("photo_grid/").last}") %>
+    <div class="bg-rose-50 rounded-lg h-40 lg:h-60 2xl:h-80" style="background-image: url('<%= photo_url %>'); background-size: cover; background-position: center;"></div>
   <% end %>
 </div>
