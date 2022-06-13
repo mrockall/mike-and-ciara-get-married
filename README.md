@@ -12,8 +12,14 @@ docker compose up
 
 # To edit the credentials within the container
 docker exec -it wedding-trivia-web-1 bin/rails credentials:edit
+
+# To run normal rails commands inside the container:
+docker compose run web CMD
+e.g. docker compose run web rake --tasks
+e.g. docker compose run web rails db:create
 ```
 
 # Links to Resources that I Found Useful
 
 1. https://github.com/nickjj/docker-rails-example
+2. https://nickjanetakis.com/blog/best-practices-around-production-ready-web-apps-with-docker-compose
