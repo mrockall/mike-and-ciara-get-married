@@ -42,6 +42,9 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
+# We're using this somewhere, not sure where, but removing it causes the precompile to fail
+gem "sassc-rails"
+
 # Use Tailwind for CSS
 gem "tailwindcss-rails"
 
