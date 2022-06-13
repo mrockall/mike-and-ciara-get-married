@@ -24,6 +24,10 @@ e.g. docker compose exec web rake --tasks
 e.g. docker compose exec web rails db:create
 ```
 
+# Deployment
+
+There's a Heroku pipeline watching the repo. It will auto-deploy any push to main to the staging environment. We can promote to production whenever I'm happy to do so.
+
 # Links to Resources that I Found Useful
 
 1. https://github.com/nickjj/docker-rails-example
