@@ -1,8 +1,4 @@
-<% 
-  photos = Rails.application.assets.each_file.select { |pathname| 
-    pathname.include? "photo_grid/"
-  }
-%>
+<% photos = Dir[Rails.root.join('app', 'assets', 'images', 'photo_grid', '*')] %>
 <h1>Photos</h1>
 <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
   <% photos.shuffle.each do |photo| %>
