@@ -1,6 +1,6 @@
 <% photos = Dir[Rails.root.join('app', 'assets', 'images', 'photo_grid', '*')] %>
 <h1>Photos</h1>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="px-6 pb-6 grid grid-cols-2 md:grid-cols-4 gap-4">
   <% photos.shuffle.each do |photo| %>
     <% photo_url = asset_url("photo_grid/#{photo.split("photo_grid/").last}") %>
     <div class="bg-rose-50 rounded-lg h-40 lg:h-60 2xl:h-80" style="background-image: url('<%= photo_url %>'); background-size: cover; background-position: center;"></div>
