@@ -1,18 +1,19 @@
 class ApplicationController < ActionController::Base
   def index
     @question = Question.order(Arel.sql('RANDOM()')).first
+    @photos_for_page = get_page_of_photos
   end
 
   def details_of_the_day
-    
+    @photos_for_page = get_page_of_photos
   end
 
   def where_to_stay
-    
+    @photos_for_page = get_page_of_photos
   end
 
   def rsvp
-    
+    @photos_for_page = get_page_of_photos
   end
 
   def answer
@@ -29,5 +30,13 @@ class ApplicationController < ActionController::Base
     end
 
     redirect_to '/'
+  end
+
+  private
+
+  def get_page_of_photos
+    page_size = 8
+    all_photos = Dir[Rails.root.join('app', 'assets', 'images', 'photo_grid', '*')]
+    all_photos.shuffle.first(page_size)
   end
 end
