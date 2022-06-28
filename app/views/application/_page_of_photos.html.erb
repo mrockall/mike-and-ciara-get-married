@@ -1,4 +1,8 @@
-<% @photos_for_page.shuffle.each do |photo| %>
-  <% photo_url = asset_url("photo_grid/#{photo.split("photo_grid/").last}") %>
-  <div class="bg-rose-100 rounded-lg h-96 grayscale hover:greyscale bg-cover bg-center" style="background-image: url(<%= photo_url %>)"></div>
-<% end %>
+<section class="p-6 bg-rose-50">
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <% @photos_for_page.shuffle.each do |photo| %>
+      <% photo_url = asset_url("photo_grid/#{photo.split("photo_grid/").last}") %>
+      <div class="bg-rose-100 rounded-lg h-96 grayscale hover:greyscale bg-cover bg-center" style="background-image: url(<%= photo_url %>)"></div>
+    <% end %>
+  </div>
+</section>
