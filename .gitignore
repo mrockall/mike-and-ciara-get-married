@@ -33,6 +33,9 @@
 # Ignore local .env
 .env
 
+# Ignore any notes I write.
+/.notes/*
+
 /app/assets/builds/*
 !/app/assets/builds/.keep
 
