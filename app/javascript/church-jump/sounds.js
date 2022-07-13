@@ -1,4 +1,4 @@
-import assets from './assets.js'
+import assets from 'church-jump/assets'
 
 const AudioContext = window.AudioContext || window.webkitAudioContext
 const audioContext = new AudioContext()

@@ -1,4 +1,4 @@
-import sprites from '../sprites.js'
+import sprites from 'church-jump/sprites'
 
 const cache = new Map()
 

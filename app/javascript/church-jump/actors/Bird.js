@@ -1,5 +1,5 @@
-import sprites from '../sprites.js'
-import Actor from './Actor.js'
+import sprites from 'church-jump/sprites'
+import Actor from 'church-jump/actors/Actor'
 
 export default class Bird extends Actor {
   static maxBirdHeight = Math.max(sprites.birdUp.h, sprites.birdDown.h) / 2

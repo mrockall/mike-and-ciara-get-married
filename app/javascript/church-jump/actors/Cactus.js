@@ -1,5 +1,5 @@
-import { randItem } from '../utils.js'
-import Actor from './Actor.js'
+import { randItem } from 'church-jump/utils'
+import Actor from 'church-jump/actors/Actor'
 
 const VARIANTS = ['cactus', 'cactusDouble', 'cactusDoubleB', 'cactusTriple']
 

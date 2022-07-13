@@ -1,4 +1,4 @@
-import Actor from './Actor.js'
+import Actor from 'church-jump/actors/Actor'
 
 export default class Dino extends Actor {
   constructor(imageData) {

@@ -1,5 +1,5 @@
-import { randInteger } from '../utils.js'
-import Actor from './Actor.js'
+import { randInteger } from 'church-jump/utils'
+import Actor from 'church-jump/actors/Actor'
 
 export default class Cloud extends Actor {
   constructor(canvasWidth) {

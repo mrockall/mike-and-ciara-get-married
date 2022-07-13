@@ -1,4 +1,4 @@
-import DinoGame from './game/DinoGame.js'
+import DinoGame from 'church-jump/game/DinoGame'
 
 export default function startGame() {
   const game = new DinoGame(600, 150)

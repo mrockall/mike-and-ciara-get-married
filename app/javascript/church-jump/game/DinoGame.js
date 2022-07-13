@@ -1,18 +1,18 @@
-import Bird from '../actors/Bird.js'
-import Cactus from '../actors/Cactus.js'
-import Cloud from '../actors/Cloud.js'
-import Dino from '../actors/Dino.js'
-import sprites from '../sprites.js'
-import assets from '../assets.js'
-import { playSound } from '../sounds.js'
+import Bird from 'church-jump/actors/Bird'
+import Cactus from 'church-jump/actors/Cactus'
+import Cloud from 'church-jump/actors/Cloud'
+import Dino from 'church-jump/actors/Dino'
+import sprites from 'church-jump/sprites'
+import assets from 'church-jump/assets'
+import { playSound } from 'church-jump/sounds'
 import {
   loadFont,
   loadImage,
   getImageData,
   randBoolean,
   randInteger,
-} from '../utils.js'
-import GameRunner from './GameRunner.js'
+} from 'church-jump/utils'
+import GameRunner from 'church-jump/game/GameRunner'
 
 export default class DinoGame extends GameRunner {
   constructor(width, height) {
