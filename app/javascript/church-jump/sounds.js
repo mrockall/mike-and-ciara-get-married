@@ -1,5 +1,4 @@
 import assets from './assets.js'
-console.log(assets);
 
 const AudioContext = window.AudioContext || window.webkitAudioContext
 const audioContext = new AudioContext()
