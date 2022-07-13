@@ -1,3 +1,51 @@
-<p>Details of the day</p>
+<%
+ events = [{
+  time: '1pm',
+  title: 'Ceremony',
+  description: '',
+  location: '',
+  icon: ''
+ }, {
+  time: '2pm',
+  title: 'Coffee at the Church',
+  description: '',
+  location: '',
+  icon: ''
+ }, {
+  time: '4pm',
+  title: 'Drinks Reception',
+  description: '',
+  location: '',
+  icon: ''
+ }, {
+  time: '6pm',
+  title: 'Dinner',
+  description: '',
+  location: '',
+  icon: ''
+ }, {
+  time: '8pm',
+  title: 'Speeches',
+  description: '',
+  location: '',
+  icon: ''
+ }, {
+  time: '9pm',
+  title: 'Dancing',
+  description: '',
+  location: '',
+  icon: ''
+ }]
+%>
+
+<ul class="p-6">
+  <% events.each do |event| %>
+  <li class="flex">
+    <div class="flex-none w-12"><%= event[:time] %></div>
+    <div class="flex-none w-12 h-12 border-">
+    <div class="flex-1"><%= event[:title] %></div>
+  </li>
+  <% end %>
+</ul>
 
 <%= render "page_of_photos" %>
