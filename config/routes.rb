@@ -7,5 +7,7 @@ Rails.application.routes.draw do
   get 'where-to-stay', to: 'application#where_to_stay'
   get 'rsvp', to: 'application#rsvp'
 
+  get 'games/church-jump', to: 'application#church_game'
+
   root 'application#index'
 end

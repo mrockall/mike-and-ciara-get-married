@@ -32,6 +32,10 @@ class ApplicationController < ActionController::Base
     redirect_to '/'
   end
 
+  def church_game
+    
+  end
+
   private
 
   def get_page_of_photos

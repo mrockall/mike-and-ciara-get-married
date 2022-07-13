@@ -32,3 +32,4 @@ There's a Heroku pipeline watching the repo. It will auto-deploy any push to mai
 
 1. https://github.com/nickjj/docker-rails-example
 2. https://nickjanetakis.com/blog/best-practices-around-production-ready-web-apps-with-docker-compose
+3. https://github.com/chrisdothtml/chrome-dino
