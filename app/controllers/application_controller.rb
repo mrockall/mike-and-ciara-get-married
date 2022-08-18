@@ -5,14 +5,17 @@ class ApplicationController < ActionController::Base
   end
 
   def details_of_the_day
+    @page_title = "Details of the Day"
     @photos_for_page = get_page_of_photos
   end
 
   def where_to_stay
+    @page_title = "Where to Stay"
     @photos_for_page = get_page_of_photos
   end
 
   def rsvp
+    @page_title = "RSVP"
     @photos_for_page = get_page_of_photos
   end
 

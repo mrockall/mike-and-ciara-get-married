@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ciara & Mike Get Married</title>
+    <title><%= @page_title.present? ? "#{@page_title} - " : "" %>Ciara & Mike Get Married</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
