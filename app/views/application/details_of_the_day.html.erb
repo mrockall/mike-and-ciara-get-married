@@ -1,51 +1,88 @@
 <%
  events = [{
+  type: 'secondary',
+  time: 'Morning',
+  title: 'Travel to Fivemiletown',
+  description: "This won't matter to anyone who is local, but to those coming from afar, here are the directions to get you to the Church. If you don't fancy the drive on the morning of the wedding then we can recommend some places to stay that are somewhat nearer.",
+  actions: [{
+    url: "https://www.google.ie/maps/dir/Galway/St+Mary's+Catholic+Church,+Fivemiletown,+Fivemiletown+BT75+0QP,+United+Kingdom/@53.8217957,-8.7424165,9z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x485b93955a2d5bff:0x32b1b440a495281!2m2!1d-9.0567905!2d53.270668!1m5!1m1!1s0x485e255d6ed134b5:0x6d85f51e05c835a!2m2!1d-7.3069256!2d54.3793989!3e0",
+    text: '🧭 From Galway (~ 3 hours)'
+  }]
+ }, {
+  type: 'primary',
   time: '1pm',
-  title: 'Ceremony',
-  description: '',
-  location: '',
-  icon: ''
+  title: 'Ceremony 💒',
+  location: "St Mary's Church, Fivemiletown",
+  description: "The ceremony is in church just outside of Fivemiletown. It's the church that Ciara attended when she was growing up. There is parking in a small carpark nearby, and you can also park along the side of the road. Remember though, it is a main road, so do be careful when parking and getting over to the church.",
+  actions: [{
+    url: "https://www.google.ie/maps/place/St+Mary's+Catholic+Church,+Fivemiletown/@54.379372,-7.3090818,17z/data=!3m1!4b1!4m5!3m4!1s0x485e255d6ed134b5:0x6d85f51e05c835a!8m2!3d54.3793989!4d-7.3069256",
+    text: '📍 Church'
+  }, {
+    url: "https://www.google.ie/maps/place/King+George+V+Playing+Fields/@54.3793903,-7.3095287,248m/data=!3m1!1e3!4m5!3m4!1s0x485e25d6778db313:0x4b588a36e8b390e0!8m2!3d54.3796416!4d-7.3085123",
+    text: '📍 Car Park'
+  }]
  }, {
+  type: 'primary',
   time: '2pm',
-  title: 'Coffee at the Church',
-  description: '',
-  location: '',
-  icon: ''
+  title: 'Coffee ☕',
+  location: "St Mary's Church, Fivemiletown",
+  description: "It is a long drive from Fivemiletown to Farnham, so to make sure that you're well caffienated before you leave, we'll have a coffee cart nearby serving drinks and sweets. Fingers crossed it doesn't rain on us."
  }, {
+  type: 'secondary',
+  time: '3ish',
+  title: 'Travel to Farnham Estate',
+  description: "It's about a 45 minute drive from the church to Farnham Estate. Google Maps can change it's mind on the best route. We've always found the best way to be to head back towards Enniskillen, turn south at Maguiresbridge, go through Lisnaskea and Newtownbutler, and you'll run into the north side of Cavan town. From there I trust Google Maps to take you the rest of the way.",
+  actions: [{
+    url: "https://www.google.ie/maps/dir/St+Mary's+Catholic+Church,+Fivemiletown,+Fivemiletown+BT75+0QP,+United+Kingdom/Farnham+Estate,+County+Cavan/@54.1862209,-7.6905393,10z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x485e255d6ed134b5:0x6d85f51e05c835a!2m2!1d-7.3069256!2d54.3793989!1m5!1m1!1s0x485e0da44652a9bf:0x2396ace3600ae133!2m2!1d-7.39995!2d54.00253!3e0",
+    text: '🧭 From the Church (~ 45 minutes)'
+  }]
+ }, {
+  type: 'primary',
   time: '4pm',
-  title: 'Drinks Reception',
-  description: '',
-  location: '',
-  icon: ''
+  title: 'Drinks Reception 🍸',
+  location: 'Farnham Estate, Cavan',
+  description: "We'll have some music, drinks and small bites once you arrive at the hotel. There's no rush to be here for 4pm, take your time. The wedding venue at Farnham Estate is to the right hand side of the main house, facing onto the green. You can walk past the main house and directly over to it. Or you'll find it if you head into the reception as well."
  }, {
+  type: 'primary',
   time: '6pm',
-  title: 'Dinner',
-  description: '',
-  location: '',
-  icon: ''
+  title: 'Dinner 🍛',
+  location: 'Farnham Estate, Cavan',
+  description: "Dinner will be served at approximately 6. We've no details on the courses just yet. We've a menu tasting in Decemeber and will have more information after that. Please do let us know if you've any special dietary requirements."
  }, {
+  type: 'primary',
   time: '8pm',
-  title: 'Speeches',
-  description: '',
-  location: '',
-  icon: ''
+  title: 'Speeches 💬',
+  location: 'Farnham Estate, Cavan',
+  description: "The last of the formalities for the evening. Settle in to hear from the fathers, Mike, and the best man Liam. These will happen over desert."
  }, {
+  type: 'primary',
   time: '9pm',
-  title: 'Dancing',
-  description: '',
-  location: '',
-  icon: ''
+  title: 'Dancing 💃',
+  location: 'Farnham Estate, Cavan',
+  description: "After the speeches, that band will come on and it's dancing time. Bring your best dancing shoes and get ready to move. Send us over your best wedding song recommendations and we'll pass them on to the band."
  }]
 %>
 
-<ul class="p-6">
+<main class="py-8 px-6 lg:px-60 lg:bg-[url('flowers--home.png')] bg-no-repeat bg-[position:-100px_30px]">
+  <h1 class="pt-6 pb-12 text-5xl text-rose-900">Details of the Day</h1>
+  <ol class="relative border-l border-rose-200">                  
   <% events.each do |event| %>
-  <li class="flex">
-    <div class="flex-none w-12"><%= event[:time] %></div>
-    <div class="flex-none w-12 h-12 border-">
-    <div class="flex-1"><%= event[:title] %></div>
-  </li>
+    <li class="mb-10 ml-4 text-stone-700">
+      <div class="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 border border-rose-200 bg-rose-200"></div>
+      <time class="mb-1 text-sm font-normal leading-none"><%= event[:time] %><%= event[:location].present? ? " - #{event[:location]}" : "" %></time>
+      <h3 class="text-lg <%= event[:type] == "primary" ? "font-semibold" : "" %>"><%= event[:title] %></h3>
+      <% if event[:description].present? %> 
+        <p class="text-base font-normal text-stone-500 my-2"><%= event[:description] %></p>
+      <% end %>
+
+      <% if event[:actions].present? %> 
+        <% event[:actions].each do |action| %>
+        <a href="<%= action[:url] %>" class="inline-flex items-center py-1 px-2 mt-1 text-sm font-medium text-stone-700 bg-white rounded-lg border border-stone-200 hover:bg-rose-100 hover:text-rose-900 hover:border-rose-100 focus:z-10 focus:ring-4 focus:outline-none focus:ring-rose-200 focus:text-rose-900"><%= action[:text] %> <svg class="ml-2 w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></a>
+        <% end %>
+      <% end %>
+    </li>
   <% end %>
-</ul>
+  </ol>
+</main>
 
 <%= render "page_of_photos" %>
