@@ -1,8 +1,39 @@
 <main class="py-8 px-6 lg:px-60 lg:bg-[url('flowers--home.png')] bg-no-repeat bg-[position:-100px_30px]">
   <%= render "svg/rsvp" %>
-  <p class="leading-7 max-w-xl pb-4">We’re so excited to celebrate our wedding day with you.</p>
-  <p class="leading-7 max-w-xl pb-4">You will find all the information you need about the day on this site. We'll be updating it and adding more information once we have it. Please don’t hesitate to send us a message if you’ve any other questions.</p>
-  <p class="leading-7 max-w-xl">We cannot wait to share the day with you, and look forward to an amazing day.</p>
+  <div class="grid grid-cols-2 gap-4 text-stone-500">
+    <!-- <div class="p-4 border border-stone-200 rounded-xl">
+      <h3 class="mb-4 text-lg font-semibold text-stone-700">Fill this in</h3>
+      <form>
+        <div class="mb-4">
+          <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Name on the invite:</label>
+          <input id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required="true">
+        </div>
+        <div class="mb-4">
+          <label for="attending" class="block mb-2 text-sm font-medium text-gray-900">Will you be attending?</label>
+          <input id="attending" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required="true">
+        </div>
+        <div class="mb-4">
+          <label for="dietary" class="block mb-2 text-sm font-medium text-gray-900">Have you any dietary requirements?</label>
+          <input id="dietary" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required="true">
+        </div>
+        <div class="mb-4">
+          <label for="other" class="block mb-2 text-sm font-medium text-gray-900">Anything else you'd like to pass on?</label>
+          <textarea id="other" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required=""></textarea>
+        </div>
+        <button type="submit" class="text-rose-900 bg-rose-100 hover:bg-rose-200 focus:ring-4 focus:outline-none focus:ring-rose-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Submit</button>
+      </form>
+    </div> -->
+    <div class="p-4 border border-stone-200 rounded-xl">
+      <h3 class="mb-4 text-lg font-semibold text-stone-700">Whats App or Call</h3>
+      <p class="mb-4">The easiest way to RSVP is to either call or text us.</p>
+      <p class="mb-4">We'll ask, but please make sure to let us know if you've any special dietary requirements.</p>
+      <p class="mb-4">You can reach us on:</p>
+      <ul class="pl-6 list-disc">
+        <li>Ciara: +353 86 456 4375</li>
+        <li>Mike: +353 86 1559823 </li>
+      </ul>
+    </div>
+  </div>
 </main>
 
 <%= render "page_of_photos" %>
