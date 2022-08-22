@@ -1,8 +1,142 @@
+<%
+  photos = [{
+    file: "ashford-castle.webp",
+    label: "Ashford Castle",
+    date: "August 2021"
+  }, {
+    file: "cliffs-of-moher.webp",
+    label: "Cliffs of Moher",
+    date: "2018"
+  }, {
+    file: "dubai.webp",
+    label: "Dubai",
+    date: "April 2022"
+  }, {
+    file: "engagement-1.webp",
+    label: "Engagement Night",
+    date: "November 2021"
+  }, {
+    file: "engagement-2.webp",
+    label: "Engagement Night",
+    date: "November 2021"
+  }, {
+    file: "engagement-3.webp",
+    label: "Engagement Night",
+    date: "November 2021"
+  }, {
+    file: "fivemiletown.webp",
+    label: "Ciara's Front Garden",
+    date: "???"
+  }, {
+    file: "glasgow.webp",
+    label: "Calum & Allison's Wedding",
+    date: "??"
+  }, {
+    file: "gougane-barra.webp",
+    label: "Gougane Barra",
+    date: "??"
+  }, {
+    file: "kai.webp",
+    label: "Kai",
+    date: "November 2022"
+  }, {
+    file: "linnanes-restaurant.webp",
+    label: "Linnane's",
+    date: "???"
+  }, {
+    file: "lisbon.webp",
+    label: "Lisbon",
+    date: "???"
+  }, {
+    file: "lough-eske.webp",
+    label: "Lough Eske",
+    date: "November 2022"
+  }, {
+    file: "middle-arch.webp",
+    label: "Middle Arch",
+    date: "???"
+  }, {
+    file: "mizen-head.webp",
+    label: "Mizen Head",
+    date: "???"
+  }, {
+    file: "oranmore.webp",
+    label: "Rockall's Front Room",
+    date: "November 2022"
+  }, {
+    file: "santorini-1.webp",
+    label: "Santorini",
+    date: "September 2021"
+  }, {
+    file: "santorini-10.webp",
+    label: "Santorini",
+    date: "September 2021"
+  }, {
+    file: "santorini-11.webp",
+    label: "Santorini",
+    date: "September 2021"
+  }, {
+    file: "santorini-12.webp",
+    label: "Santorini",
+    date: "September 2021"
+  }, {
+    file: "santorini-2.webp",
+    label: "Santorini",
+    date: "September 2021"
+  }, {
+    file: "santorini-3.webp",
+    label: "Santorini",
+    date: "September 2021"
+  }, {
+    file: "santorini-4.webp",
+    label: "Santorini",
+    date: "September 2021"
+  }, {
+    file: "santorini-5.webp",
+    label: "Santorini",
+    date: "September 2021"
+  }, {
+    file: "santorini-6.webp",
+    label: "Santorini",
+    date: "September 2021"
+  }, {
+    file: "santorini-7.webp",
+    label: "Santorini",
+    date: "September 2021"
+  }, {
+    file: "santorini-8.webp",
+    label: "Santorini",
+    date: "September 2021"
+  }, {
+    file: "santorini-9.webp",
+    label: "Santorini",
+    date: "September 2021"
+  }, {
+    file: "sligo.webp",
+    label: "Sligo",
+    date: "???"
+  }, {
+    file: "trim.webp",
+    label: "Trim",
+    date: "???"
+  }, {
+    file: "waiheke-island.webp",
+    label: "Waiheke Island, New Zealand",
+    date: "March 2019"
+  }]
+%>
 <section class="p-6 bg-rose-50">
-  <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-    <% @photos_for_page.shuffle.each do |photo| %>
-      <% photo_url = asset_url("photo_grid/#{photo.split("photo_grid/").last}") %>
-      <div class="bg-rose-100 rounded-lg h-96 transition-all grayscale hover:greyscale-0 bg-cover bg-center" style="background-image: url(<%= photo_url %>)"></div>
+  <header class="bg-[url('flowers--camera.png')] bg-no-repeat bg-right mb-4">
+    <%= render "svg/photos_from_the_journey" %>
+  </header>
+  <ul class="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <% photos.shuffle.first(8).each do |photo| %>
+      <% photo_url = asset_url("photo_grid/dist/#{photo[:file]}") %>
+      <li>
+        <div class="bg-rose-100 rounded-lg h-96 transition-all grayscale hover:grayscale-0 hover:ring-4 ring-rose-200 bg-cover bg-center duration-300" style="background-image: url(<%= photo_url %>)"></div>
+        <p class="pl-2 pt-2 font-lg text-stone-500 font-semibold"><%= photo[:label] %></p>
+        <p class="pl-2 pb-2 text-[0.85rem] tracking-wide text-stone-500"><%= photo[:date] %></p>
+      </li>
     <% end %>
-  </div>
+  </ul>
 </section>
