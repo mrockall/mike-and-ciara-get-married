@@ -60,12 +60,18 @@
   title: 'Dancing 💃',
   location: 'Farnham Estate, Cavan',
   description: "After the speeches, that band will come on and it's dancing time. Bring your best dancing shoes and get ready to move. Send us over your best wedding song recommendations and we'll pass them on to the band."
+ }, {
+  type: 'primary',
+  time: '11pm',
+  title: 'Session 🎻 🪗',
+  location: 'Farnham Estate, Cavan',
+  description: "Once the band and DJ are finished, we'll get the traditional music going. If you've got an instrument or a good singing voice, then come along."
  }]
 %>
 
 <main class="py-8 px-6 lg:px-60 lg:bg-[url('flowers--home.png')] bg-no-repeat bg-[position:-100px_30px]">
   <%= render "svg/details_of_the_day" %>
-  <ol class="mt-12 relative border-l border-rose-200">                  
+  <ol class="relative border-l border-rose-200">                  
   <% events.each do |event| %>
     <li class="mb-10 ml-4 text-stone-700">
       <div class="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 border border-rose-200 bg-rose-200"></div>
