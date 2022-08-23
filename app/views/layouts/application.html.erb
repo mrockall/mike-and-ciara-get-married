@@ -11,35 +11,49 @@
   </head>
 
   <body class="font-serif">
-    <nav class="flex flex-wrap px-2 pt-2">
-      <%
-        links = [{
-          text: 'Home',
-          url: '/'
-        }, {
-          text: "Details of the Day", 
-          url: "/details-of-the-day"
-        }, {
-          text: "Where to Stay", 
-          url: "/where-to-stay"
-        }, {
-          text: "RSVP", 
-          url: "/rsvp"
-        }]
-      %>
+    <header class="pt-4 px-4 md:px-6 md:pt-8">
+      <nav class="flex flex-wrap">
+        <%
+          links = [{
+            text: 'Home',
+            url: '/'
+          }, {
+            text: "Details of the Day", 
+            url: "/details-of-the-day"
+          }, {
+            text: "Where to Stay", 
+            url: "/where-to-stay"
+          }, {
+            text: "RSVP", 
+            url: "/rsvp"
+          }]
+        %>
 
-      <% links.each do |link| %>
-        <% classes = ["px-4", "mr-2", "py-2", "text-stone-700", "rounded-lg", "hover:bg-rose-100", "hover:text-rose-900"] %>
-        <% classes << "bg-rose-100 text-rose-900" if request.path == link[:url] %>
-        <%= link_to link[:text], link[:url], class: classes.join(" ") %>
-      <% end %>
-    </nav>
+        <% links.each do |link| %>
+          <% classes = ["px-4", "mr-2", "py-2", "text-stone-700", "rounded-lg", "hover:bg-rose-100", "hover:text-rose-900"] %>
+          <% classes << "bg-rose-100 text-rose-900" if request.path == link[:url] %>
+          <%= link_to link[:text], link[:url], class: classes.join(" ") %>
+        <% end %>
+      </nav>
+      <hr class="mt-6 lg:mt-8 border-gray-200">
+    </header>
 
-    <main>
+    <main class="relative overflow-hidden
+      before:absolute before:h-96 before:w-96 before:left-[-10rem] before:top-[-12rem]
+      before:bg-[url('flowers--home.png')] before:bg-no-repeat before:bg-center before:scale-50
+      md:before:left-[-10rem] md:before:top-[-12rem] md:before:scale-75
+      lg:before:left-[-10rem] lg:before:top-[-12rem] lg:before:scale-90
+      xl:before:left-[-8rem] xl:before:top-[-8rem] xl:before:scale-110
+      after:absolute after:h-96 after:w-96 after:right-[-10rem] after:top-[-12rem]
+      after:bg-[url('flowers--home.png')] after:bg-no-repeat after:bg-center after:rotate-45 after:scale-50
+      md:after:right-[-10rem] md:after:top-[-12rem] md:after:scale-75
+      lg:after:right-[-10rem] lg:after:top-[-12rem] lg:after:scale-90
+      xl:after:right-[-8rem] xl:after:top-[-8rem] xl:after:scale-110
+    ">
       <%= yield %>
     </main>
 
-    <footer class="p-4 bg-white md:px-6 md:py-8">
+    <footer class="pt-8 p-4 md:px-6 md:py-8">
       <aside class="px-6">
         <%
           days_until = (Date.parse("1/4/2023") - Date.today).to_i
@@ -62,7 +76,7 @@
         </div>
       </aside>
       <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8">
-      <nav class="flex flex-wrap px-2 pt-2">
+      <nav class="flex flex-wrap">
         <% links.each do |link| %>
           <% classes = ["px-4", "mr-2", "py-2", "text-stone-700", "rounded-lg", "hover:bg-rose-100", "hover:text-rose-900"] %>
           <% classes << "bg-rose-100 text-rose-900" if request.path == link[:url] %>
