@@ -1,5 +1,4 @@
-import assets from 'church-jump/assets'
-
+const assets = window.assets;
 const AudioContext = window.AudioContext || window.webkitAudioContext
 const audioContext = new AudioContext()
 const soundNames = ['game_over', 'jump', 'level_up']

@@ -3,7 +3,6 @@ import Cactus from 'church-jump/actors/Cactus'
 import Cloud from 'church-jump/actors/Cloud'
 import Dino from 'church-jump/actors/Dino'
 import sprites from 'church-jump/sprites'
-import assets from 'church-jump/assets'
 import { playSound } from 'church-jump/sounds'
 import {
   loadFont,
@@ -13,6 +12,8 @@ import {
   randInteger,
 } from 'church-jump/utils'
 import GameRunner from 'church-jump/game/GameRunner'
+
+const assets = window.assets;
 
 export default class DinoGame extends GameRunner {
   constructor(width, height) {
