@@ -16,12 +16,12 @@ import GameRunner from 'church-jump/game/GameRunner'
 const assets = window.assets;
 
 export default class DinoGame extends GameRunner {
-  constructor(width, height) {
+  constructor(canvas) {
     super()
 
     this.width = null
     this.height = null
-    this.canvas = this.createCanvas(width, height)
+    this.canvas = this.setupCanvas(canvas)
     this.canvasCtx = this.canvas.getContext('2d')
     this.spriteImage = null
     this.spriteImageData = null
@@ -70,20 +70,21 @@ export default class DinoGame extends GameRunner {
 
   // ref for canvas pixel density:
   // https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio#correcting_resolution_in_a_%3Ccanvas%3E
-  createCanvas(width, height) {
-    const canvas = document.getElementById('church-game')
+  setupCanvas(canvas) {
     const ctx = canvas.getContext('2d')
     const scale = window.devicePixelRatio
+    const parent = canvas.parentElement
 
-    this.width = width
-    this.height = height
-    canvas.style.width = width + 'px'
-    canvas.style.height = height + 'px'
-    canvas.width = Math.floor(width * scale)
-    canvas.height = Math.floor(height * scale)
+    const computedStyle = getComputedStyle(parent)
+
+    this.width = parent.clientWidth - parseFloat(computedStyle.paddingLeft) - parseFloat(computedStyle.paddingRight);
+    this.height = this.width > 350 ? 350 : this.width * 1.2
+    canvas.style.width = this.width + 'px'
+    canvas.style.height = this.height + 'px'
+    canvas.width = Math.floor(this.width * scale)
+    canvas.height = Math.floor(this.height * scale)
     ctx.scale(scale, scale)
 
-    document.body.appendChild(canvas)
     return canvas
   }
 
@@ -278,7 +279,7 @@ export default class DinoGame extends GameRunner {
   }
 
   drawBackground() {
-    this.canvasCtx.fillStyle = '#f7f7f7'
+    this.canvasCtx.fillStyle = '#fff'
     this.canvasCtx.fillRect(0, 0, this.width, this.height)
   }
 

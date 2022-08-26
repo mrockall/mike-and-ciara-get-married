@@ -5,4 +5,4 @@ import ChurchJumpGame from 'church-jump'
 
 const church_game = document.getElementById('church-game')
 if(church_game)
-  ChurchJumpGame();
+  ChurchJumpGame(church_game);

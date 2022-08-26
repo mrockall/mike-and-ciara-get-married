@@ -1,7 +1,7 @@
 import DinoGame from 'church-jump/game/DinoGame'
 
-export default function startGame() {
-  const game = new DinoGame(600, 150)
+export default function startGame(canvas) {
+  const game = new DinoGame(canvas)
   const isTouchDevice =
     'ontouchstart' in window ||
     navigator.maxTouchPoints > 0 ||
