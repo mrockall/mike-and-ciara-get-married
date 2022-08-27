@@ -1,88 +1,119 @@
 <%
   locations = [{
-    name: 'Hotel @ Farnham Estate',
-    description: "Something here about the venue itself. Maybe about how big it is, or the style of it, or something.",
-    night: "either night",
+    name: 'Farnham Estate',
+    night: "wedding",
+    image: 'farnham',
+    times: {
+      galway: "2 hours 10 mins",
+      fivemiletown: "45 mins",
+      farnham: "0 mins"
+    },
     actions: [{
-      url: "#",
+      url: "https://www.google.ie/maps/place/Drumbar,+Farnham+Estate,+Co.+Cavan/@54.0025242,-7.435828,14z/data=!3m1!4b1!4m5!3m4!1s0x485e0da44652a9bf:0x2396ace3600ae133!8m2!3d54.00253!4d-7.39995",
       text: '📍 Location'
     }, {
-      url: "#",
+      url: "https://www.farnhamestate.ie/",
       text: '🔗 Website'
     }]
   }, {
-    name: 'Lodges @ Farnham Estate',
-    description: "Something here about the venue itself. Maybe about how big it is, or the style of it, or something.",
-    night: "either night",
+    name: 'Drumlanaught Cottage',
+    night: "wedding",
+    image: "drumlanaught",
+    times: {
+      galway: "2 hours 10 mins",
+      fivemiletown: "50 mins",
+      farnham: "4 mins"
+    },
     actions: [{
-      url: "#",
+      url: "https://www.google.ie/maps/place/Drumlanaught+Cottage+Farnham/@53.9984973,-7.4148669,17z/data=!3m1!4b1!4m8!3m7!1s0x485e0d7837e0cd4f:0xeccbb3910b3a251d!5m2!4m1!1i2!8m2!3d53.9985688!4d-7.4127093",
       text: '📍 Location'
     }, {
-      url: "#",
+      url: "https://www.booking.com/hotel/ie/drumlanaught-farnham-house.en-gb.html",
       text: '🔗 Website'
     }]
   }, {
-    name: 'TBD',
-    description: "Something here about the venue itself. Maybe about how big it is, or the style of it, or something.",
-    night: "the night before",
+    name: 'The Valley Hotel',
+    night: "church",
+    image: 'valley',
+    times: {
+      galway: "3 hours",
+      fivemiletown: "0 mins",
+      farnham: "45 mins"
+    },
     actions: [{
-      url: "#",
+      url: "https://www.thevalleyhotel.com/en/",
       text: '📍 Location'
     }, {
-      url: "#",
+      url: "https://www.google.ie/maps/place/The+Valley+Hotel/@54.378145,-7.3169907,17z/data=!3m1!4b1!4m8!3m7!1s0x485e255b3ba7e563:0x3cdcb6740d8bf3!5m2!4m1!1i2!8m2!3d54.3781676!4d-7.314822",
       text: '🔗 Website'
     }]
   }, {
-    name: 'TBD',
-    description: "Something here about the venue itself. Maybe about how big it is, or the style of it, or something.",
-    night: "the night before",
+    name: 'Killyhevlin Hotel',
+    night: "church",
+    image: 'killyhevlin',
+    times: {
+      galway: "3 hours",
+      fivemiletown: "20 mins",
+      farnham: "45 mins"
+    },
     actions: [{
-      url: "#",
+      url: "https://www.google.ie/maps/place/Killyhevlin+Lakeside+Hotel+%26+Lodges/@54.3314391,-7.6236403,16z/data=!4m16!1m7!3m6!1s0x485e47ab75e5743b:0xcf72f0cdc42aaebb!2sKillyhevlin,+Enniskillen,+UK!3b1!8m2!3d54.3313063!4d-7.6193115!3m7!1s0x485e4654b440833b:0x7f7c6474393494ed!5m2!4m1!1i2!8m2!3d54.329166!4d-7.6194411",
       text: '📍 Location'
     }, {
-      url: "#",
+      url: "https://www.killyhevlin.com/",
       text: '🔗 Website'
     }]
   }, {
-    name: 'TBD',
-    description: "Something here about the venue itself. Maybe about how big it is, or the style of it, or something.",
-    night: "the wedding night",
+    name: 'Corick House',
+    night: "church",
+    image: 'corick',
+    times: {
+      galway: "3 hours 15 mins",
+      fivemiletown: "15 mins",
+      farnham: "1 hour"
+    },
     actions: [{
-      url: "#",
+      url: "https://www.google.ie/maps/place/Corick+House+Hotel+%26+Spa/@54.4253215,-7.1654552,17z/data=!3m1!4b1!4m8!3m7!1s0x485e285b3f1ac5d9:0x9702e3821caf531e!5m2!4m1!1i2!8m2!3d54.4253215!4d-7.1632665",
       text: '📍 Location'
     }, {
-      url: "#",
+      url: "https://www.corickcountryhouse.com/",
+      text: '🔗 Website'
+    }]
+  }, {
+    name: 'Hotel Kilmore',
+    night: "wedding",
+    image: 'kilmore',
+    times: {
+      galway: "2 hours 10 mins",
+      fivemiletown: "45 mins",
+      farnham: "10 mins"
+    },
+    actions: [{
+      url: "https://www.google.ie/maps/place/Hotel+Kilmore/@53.9865713,-7.324493,17z/data=!3m1!4b1!4m8!3m7!1s0x485dfdd53c275101:0x5d24d58c985cfa77!5m2!4m1!1i2!8m2!3d53.9865713!4d-7.3223043",
+      text: '📍 Location'
+    }, {
+      url: "https://www.hotelkilmore.ie/",
       text: '🔗 Website'
     }]
   }]
 %>
 <header class="py-12 px-6 mx-auto max-w-4xl">
   <%= render "svg/where_to_stay" %>
+  <p class="pb-4 text-base leading-7">Guests are free to stay wherever they'd like on the night of the wedding. There are rooms and lodges available on site at Farnham Estate - contact the hotel and mention the McKenna/Rockall wedding to avail of the wedding rate. There are additional options for Airbnbs, B&Bs, and hotels in Cavan town which are approximately a 15 minute taxi away. Please see the list below for some of the options.</p>
+
+  <p class="pb-4 text-base leading-7">For those of travelling from afar to the wedding, you may want to stay closer to the church on the night before. We have also included some options within a 20 minute drive of Fivemiletown.</p>
+
+  <h2 class="py-4 text-2xl text-stone-700">Close to Farnham Estate</h2>
   <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-    <% locations.each do |location| %>
-    <div class="p-4 border border-stone-200 rounded-xl text-stone-500">
-      <div class="mb-4 h-32 rounded-l bg-rose-100"></div>
-      <h3 class="text-lg font-semibold text-stone-700"><%= location[:name] %></h3>
-      <p class="text-base font-normal text-stone-500 my-2">Stay here <b><%= location[:night] %>.</b></p>
+    <% locations.select {|l| l[:night] == "wedding" }.each do |location| %>
+      <%= render "accommodation_option", location: location %>
+    <% end %>
+  </div>
 
-      <p class="text-base font-normal my-2"><%= location[:description] %></p>
-      
-      <h4 class="text-base font-semibold pt-4 pb-2">Travel Time:</h4>
-      <ul class="list-disc pl-6">
-        <li>Galway: 3 hours</li>
-        <li>Fivemiletown: 10 mins</li>
-        <li>Church: 10 mins</li>
-        <li>Farnham: 45 mins</li>
-      </ul>
-
-      <% if location[:actions].present? %> 
-        <div class="pt-4">
-          <% location[:actions].each do |action| %>
-          <a href="<%= action[:url] %>" class="inline-flex items-center py-1 px-2 mt-1 text-sm font-medium text-stone-700 bg-white rounded-lg border border-stone-200 hover:bg-rose-100 hover:text-rose-900 hover:border-rose-100 focus:z-10 focus:ring-4 focus:outline-none focus:ring-rose-200 focus:text-rose-900"><%= action[:text] %> <svg class="ml-2 w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></a>
-          <% end %>
-        </div>
-      <% end %>
-    </div>
+  <h2 class="pt-8 pb-4 text-2xl text-stone-700">Close to Fivemiletown</h2>
+  <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+    <% locations.select {|l| l[:night] == "church" }.each do |location| %>
+      <%= render "accommodation_option", location: location %>
     <% end %>
   </div>
 </main>
