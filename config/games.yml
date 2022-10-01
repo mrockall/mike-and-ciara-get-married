@@ -1,0 +1,77 @@
+general_knowledge:
+  name: "General Knowledge"
+  enabled: true
+  questions:
+    - 
+      question: 'Q1: General Knowledge'
+      answers:
+        - "A1: A"
+        - "B1: B"
+        - "C1: C"
+        - "D1: D"
+    - 
+      question: 'Q2: General Knowledge'
+      answers:
+        - "A2: A"
+        - "B2: B"
+        - "C2: C"
+        - "D2: D"
+    - 
+      question: 'Q3: General Knowledge'
+      answers:
+        - "A3: A"
+        - "B3: B"
+        - "C3: C"
+        - "D3: D"
+
+memory_lane_mike:
+  name: "Memory Lane Mike"
+  enabled: true
+  questions:
+    - 
+      question: 'Q1: Memory Lane'
+      answers:
+        - "A1: A"
+        - "B1: B"
+        - "C1: C"
+        - "D1: D"
+    - 
+      question: 'Q2: General Knowledge'
+      answers:
+        - "A2: A"
+        - "B2: B"
+        - "C2: C"
+        - "D2: D"
+    - 
+      question: 'Q3: General Knowledge'
+      answers:
+        - "A3: A"
+        - "B3: B"
+        - "C3: C"
+        - "D3: D"
+
+memory_lane_ciara:
+  name: "Memory Lane Ciara"
+  enabled: true
+  questions:
+    - 
+      question: 'Q1: Memory Lane'
+      answers:
+        - "A1: A"
+        - "B1: B"
+        - "C1: C"
+        - "D1: D"
+    - 
+      question: 'Q2: General Knowledge'
+      answers:
+        - "A2: A"
+        - "B2: B"
+        - "C2: C"
+        - "D2: D"
+    - 
+      question: 'Q3: General Knowledge'
+      answers:
+        - "A3: A"
+        - "B3: B"
+        - "C3: C"
+        - "D3: D"
