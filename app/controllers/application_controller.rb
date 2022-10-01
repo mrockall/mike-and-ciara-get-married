@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  before_action :check_if_games_are_enabled
+
   def index
     @question = Question.order(Arel.sql('RANDOM()')).first
   end
@@ -15,23 +17,18 @@ class ApplicationController < ActionController::Base
     @page_title = "RSVP"
   end
 
-  def answer
-    @answer = Answer.find(params[:answer_id])
-
-    Answer.increment_counter(:count_chosen, @answer_id)
-
-    if(@answer.is_correct)
-      Question.increment_counter(:count_correct, @answer.question_id)
-      Category.increment_counter(:count_correct, @answer.question.category_id)
-    else
-      Question.increment_counter(:count_incorrect, @answer.question_id)
-      Category.increment_counter(:count_incorrect, @answer.question.category_id)
-    end
+  def games
 
     redirect_to '/'
   end
 
   def church_game
     
+  end
+
+  private
+
+  def check_if_games_are_enabled
+    @games_are_enabled = Game.where(enabled: true).any?
   end
 end

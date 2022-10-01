@@ -18,9 +18,10 @@ module Import
 
       @config.each do |game_key, game_data|
         game = Game.find_or_create_by({
-          name: game_data[:name],
-          enabled: game_data[:enabled]
+          name: game_data[:name]
         })
+
+        game.update_attribute(:enabled, game_data[:enabled])
       end
     end
 

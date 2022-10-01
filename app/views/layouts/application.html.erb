@@ -35,6 +35,13 @@
             text: "RSVP", 
             url: "/rsvp"
           }]
+
+          if @games_are_enabled
+            links << {
+              text: "Games",
+              url: "/games"
+            }
+          end
         %>
 
         <% links.each do |link| %>
