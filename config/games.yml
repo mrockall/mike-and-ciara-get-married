@@ -1,152 +1,65 @@
 general-knowledge:
-  name: "General Knowledge"
+  name: "Counties of Ireland"
   format: quiz
-  description: How well do you know Ciara & Mike? Test yourself with this simple ten question multiple choice question game.
+  description: This is a test game for Mike to build out the functionality.
   questions:
-    q1: 
-      text: 'Q1: General Knowledge'
+    connacht: 
+      text: 'Which of these is not in Connacht?'
       answers: 
         a: 
-          text: "Correct Answer"
+          text: "Westmeath"
           is_correct: true
         b: 
-          text: "B1: B"
+          text: "Galway"
           is_correct: false
         c: 
-          text: "C1: C"
+          text: "Mayo"
           is_correct: false
         d: 
-          text: "D1: D"
+          text: "Sligo"
           is_correct: false
-    q2: 
-      text: 'Q2: General Knowledge'
+    ulster: 
+      text: 'Which of these is not in Ulster?'
       answers: 
         a: 
-          text: "Correct Answer"
+          text: "Cork"
           is_correct: true
         b: 
-          text: "B13: B"
+          text: "Tyrone"
           is_correct: false
         c: 
-          text: "C1: C"
+          text: "Antrim"
           is_correct: false
         d: 
-          text: "D1: D"
+          text: "Donegal"
           is_correct: false
-    q3: 
-      text: 'Q3: General Knowledge'
+    leinster: 
+      text: 'Which of these is not in Leinster?'
       answers: 
         a: 
-          text: "Correct Answer"
+          text: "Monaghan"
           is_correct: true
         b: 
-          text: "B1: B"
+          text: "Dublin"
           is_correct: false
         c: 
-          text: "C1: C"
+          text: "Meath"
           is_correct: false
         d: 
-          text: "D1: D"
+          text: "Louth"
           is_correct: false
-
-memory-lane-mike:
-  name: "Memory Lane: Mike"
-  format: quiz
-  description: Take a whirlwind tour through Mike's childhook and answer some simple multiple choice questions.
-  questions:
-    q1: 
-      text: 'Q1: Memory Lane: Mike'
+    munster: 
+      text: 'Which of these is not in Munster?'
       answers: 
         a: 
-          text: "Correct Answer"
+          text: "Kilkenny"
           is_correct: true
         b: 
-          text: "B1: B"
+          text: "Clare"
           is_correct: false
         c: 
-          text: "C1: C"
+          text: "Tipperary"
           is_correct: false
         d: 
-          text: "D1: D"
-          is_correct: false
-    q2: 
-      text: 'Q2: Memory Lane: Mike'
-      answers: 
-        a: 
-          text: "Correct Answer"
-          is_correct: true
-        b: 
-          text: "B1: B"
-          is_correct: false
-        c: 
-          text: "C1: C"
-          is_correct: false
-        d: 
-          text: "D1: D"
-          is_correct: false
-    q3: 
-      text: 'Q3: Memory Lane: Mike'
-      answers: 
-        a: 
-          text: "Correct Answer"
-          is_correct: true
-        b: 
-          text: "B1: B"
-          is_correct: false
-        c: 
-          text: "C1: C"
-          is_correct: false
-        d: 
-          text: "D1: D"
-          is_correct: false
-
-memory-lane-ciara:
-  name: "Memory Lane Ciara"
-  format: quiz
-  description: Take a whirlwind tour through Ciara's childhook and answer some simple multiple choice questions.
-  questions:
-    q1: 
-      text: 'Q1: Memory Lane Ciara'
-      answers: 
-        a: 
-          text: "Correct Answer"
-          is_correct: true
-        b: 
-          text: "B1: B"
-          is_correct: false
-        c: 
-          text: "C1: C"
-          is_correct: false
-        d: 
-          text: "D1: D"
-          is_correct: false
-    q2: 
-      text: 'Q2: Memory Lane Ciara'
-      answers: 
-        a: 
-          text: "Correct Answer"
-          is_correct: true
-        b: 
-          text: "B1: B"
-          is_correct: false
-        c: 
-          text: "C1: C"
-          is_correct: false
-        d: 
-          text: "D1: D"
-          is_correct: false
-    q3: 
-      text: 'Q3: Memory Lane Ciara'
-      answers: 
-        a: 
-          text: "Correct Answer"
-          is_correct: true
-        b: 
-          text: "B1: B"
-          is_correct: false
-        c: 
-          text: "C1: C"
-          is_correct: false
-        d: 
-          text: "D1: D"
+          text: "Cork"
           is_correct: false

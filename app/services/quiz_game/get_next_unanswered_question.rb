@@ -5,7 +5,7 @@ module QuizGame
     end
 
     def execute
-      @game.questions.first
+      @game.enabled_questions.first
     end
   end
 end
