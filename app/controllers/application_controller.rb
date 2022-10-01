@@ -25,8 +25,11 @@ class ApplicationController < ActionController::Base
     @games = enabled_games.all
   end
 
-  def church_game
-    
+  def game
+    @game = Game.where(key: params[:key]).first
+    redirect "/" unless @game.present?
+
+    @page_title = "#{@game.name} | Games"
   end
 
   private
