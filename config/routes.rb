@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   get 'where-to-stay', to: 'application#where_to_stay'
   get 'rsvp', to: 'application#rsvp'
 
-  get 'games', to: 'application#games'
-  get 'games/:key', to: 'application#game'
+  get 'games', to: 'games#index'
+  get 'games/:key', to: 'games#game'
 
   root 'application#index'
 end

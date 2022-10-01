@@ -17,21 +17,6 @@ class ApplicationController < ActionController::Base
     @page_title = "RSVP"
   end
 
-  def games
-    enabled_games = Game.where(enabled: true)
-    redirect "/" unless enabled_games.any?
-
-    @page_title = "Games"
-    @games = enabled_games.all
-  end
-
-  def game
-    @game = Game.where(key: params[:key]).first
-    redirect "/" unless @game.present?
-
-    @page_title = "#{@game.name} | Games"
-  end
-
   private
 
   def check_if_games_are_enabled

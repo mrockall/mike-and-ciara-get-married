@@ -18,11 +18,14 @@ module Import
       Game.update_all(enabled: false)
 
       @config.each do |game_key, game_data|
-        game = Game.find_or_create_by(key: game_key)
+        game = Game.find_or_create_by({
+          key: game_key
+        })
 
         game.update_attribute(:enabled, true)
         game.update_attribute(:description, game_data[:description])
         game.update_attribute(:name, game_data[:name])
+        game.update_attribute(:format, game_data[:format])
 
         import_questions_for_game(game, game_data[:questions])
       end
@@ -34,7 +37,10 @@ module Import
       game.questions.update_all(enabled: false)
 
       questions.each do |question_key, question_data|
-        question = Question.find_or_create_by(key: question_key)
+        question = Question.find_or_create_by({
+          key: question_key,
+          game_id: game.id
+        })
 
         question.update_attribute(:text, question_data[:text])
 
@@ -46,7 +52,10 @@ module Import
       question.answers.update_all(enabled: false)
 
       answers.each do |answer_key, answer_data|
-        answer = Answer.find_or_create_by(key: answer_key)
+        answer = Answer.find_or_create_by({
+          key: answer_key,
+          question_id: question.id
+        })
 
         answer.update_attribute(:text, answer_data[:text])
         answer.update_attribute(:is_correct, answer_data[:is_correct])
