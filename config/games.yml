@@ -1,77 +1,149 @@
-general_knowledge:
+general-knowledge:
   name: "General Knowledge"
-  enabled: true
+  description: How well do you know Ciara & Mike? Test yourself with this simple ten question multiple choice question game.
   questions:
-    - 
-      question: 'Q1: General Knowledge'
-      answers:
-        - "A1: A"
-        - "B1: B"
-        - "C1: C"
-        - "D1: D"
-    - 
-      question: 'Q2: General Knowledge'
-      answers:
-        - "A2: A"
-        - "B2: B"
-        - "C2: C"
-        - "D2: D"
-    - 
-      question: 'Q3: General Knowledge'
-      answers:
-        - "A3: A"
-        - "B3: B"
-        - "C3: C"
-        - "D3: D"
+    q1: 
+      text: 'Q1: General Knowledge'
+      answers: 
+        a: 
+          text: "Correct Answer"
+          is_correct: true
+        b: 
+          text: "B1: B"
+          is_correct: false
+        c: 
+          text: "C1: C"
+          is_correct: false
+        d: 
+          text: "D1: D"
+          is_correct: false
+    q2: 
+      text: 'Q2: General Knowledge'
+      answers: 
+        a: 
+          text: "Correct Answer"
+          is_correct: true
+        b: 
+          text: "B13: B"
+          is_correct: false
+        c: 
+          text: "C1: C"
+          is_correct: false
+        d: 
+          text: "D1: D"
+          is_correct: false
+    q3: 
+      text: 'Q3: General Knowledge'
+      answers: 
+        a: 
+          text: "Correct Answer"
+          is_correct: true
+        b: 
+          text: "B1: B"
+          is_correct: false
+        c: 
+          text: "C1: C"
+          is_correct: false
+        d: 
+          text: "D1: D"
+          is_correct: false
 
-memory_lane_mike:
-  name: "Memory Lane Mike"
-  enabled: true
+memory-lane-mike:
+  name: "Memory Lane: Mike"
+  description: Take a whirlwind tour through Mike's childhook and answer some simple multiple choice questions.
   questions:
-    - 
-      question: 'Q1: Memory Lane'
-      answers:
-        - "A1: A"
-        - "B1: B"
-        - "C1: C"
-        - "D1: D"
-    - 
-      question: 'Q2: General Knowledge'
-      answers:
-        - "A2: A"
-        - "B2: B"
-        - "C2: C"
-        - "D2: D"
-    - 
-      question: 'Q3: General Knowledge'
-      answers:
-        - "A3: A"
-        - "B3: B"
-        - "C3: C"
-        - "D3: D"
+    q1: 
+      text: 'Q1: General Knowledge'
+      answers: 
+        a: 
+          text: "Correct Answer"
+          is_correct: true
+        b: 
+          text: "B1: B"
+          is_correct: false
+        c: 
+          text: "C1: C"
+          is_correct: false
+        d: 
+          text: "D1: D"
+          is_correct: false
+    q2: 
+      text: 'Q2: General Knowledge'
+      answers: 
+        a: 
+          text: "Correct Answer"
+          is_correct: true
+        b: 
+          text: "B1: B"
+          is_correct: false
+        c: 
+          text: "C1: C"
+          is_correct: false
+        d: 
+          text: "D1: D"
+          is_correct: false
+    q3: 
+      text: 'Q3: General Knowledge'
+      answers: 
+        a: 
+          text: "Correct Answer"
+          is_correct: true
+        b: 
+          text: "B1: B"
+          is_correct: false
+        c: 
+          text: "C1: C"
+          is_correct: false
+        d: 
+          text: "D1: D"
+          is_correct: false
 
-memory_lane_ciara:
+memory-lane-ciara:
   name: "Memory Lane Ciara"
-  enabled: true
+  description: Take a whirlwind tour through Ciara's childhook and answer some simple multiple choice questions.
   questions:
-    - 
-      question: 'Q1: Memory Lane'
-      answers:
-        - "A1: A"
-        - "B1: B"
-        - "C1: C"
-        - "D1: D"
-    - 
-      question: 'Q2: General Knowledge'
-      answers:
-        - "A2: A"
-        - "B2: B"
-        - "C2: C"
-        - "D2: D"
-    - 
-      question: 'Q3: General Knowledge'
-      answers:
-        - "A3: A"
-        - "B3: B"
-        - "C3: C"
-        - "D3: D"
+    q1: 
+      text: 'Q1: General Knowledge'
+      answers: 
+        a: 
+          text: "Correct Answer"
+          is_correct: true
+        b: 
+          text: "B1: B"
+          is_correct: false
+        c: 
+          text: "C1: C"
+          is_correct: false
+        d: 
+          text: "D1: D"
+          is_correct: false
+    q2: 
+      text: 'Q2: General Knowledge'
+      answers: 
+        a: 
+          text: "Correct Answer"
+          is_correct: true
+        b: 
+          text: "B1: B"
+          is_correct: false
+        c: 
+          text: "C1: C"
+          is_correct: false
+        d: 
+          text: "D1: D"
+          is_correct: false
+    q3: 
+      text: 'Q3: General Knowledge'
+      answers: 
+        a: 
+          text: "Correct Answer"
+          is_correct: true
+        b: 
+          text: "B1: B"
+          is_correct: false
+        c: 
+          text: "C1: C"
+          is_correct: false
+        d: 
+          text: "D1: D"
+          is_correct: false

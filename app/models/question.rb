@@ -1,10 +1,10 @@
 class Question < ApplicationRecord
 
-  belongs_to :category
+  belongs_to :game
   has_many :answers, dependent: :destroy
   has_one :correct_answer, -> { where(is_correct: true) }, class_name: 'Answer'
 
-  validates_presence_of :category, :text
+  validates_presence_of :game, :text
 
   def has_been_answered
     count_correct + count_incorrect > 0

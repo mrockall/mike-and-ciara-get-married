@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_10_01_102135) do
+ActiveRecord::Schema.define(version: 2022_10_01_120506) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,14 +22,8 @@ ActiveRecord::Schema.define(version: 2022_10_01_102135) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "count_chosen", default: 0
-  end
-
-  create_table "categories", force: :cascade do |t|
-    t.string "title"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.integer "count_correct", default: 0
-    t.integer "count_incorrect", default: 0
+    t.string "key"
+    t.boolean "enabled"
   end
 
   create_table "games", force: :cascade do |t|
@@ -38,15 +32,19 @@ ActiveRecord::Schema.define(version: 2022_10_01_102135) do
     t.string "type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "key"
+    t.text "description"
   end
 
   create_table "questions", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "category_id"
+    t.integer "game_id"
     t.text "text"
     t.integer "count_correct", default: 0
     t.integer "count_incorrect", default: 0
+    t.string "key"
+    t.boolean "enabled"
   end
 
 end

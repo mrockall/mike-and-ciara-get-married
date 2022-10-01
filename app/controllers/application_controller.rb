@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   before_action :check_if_games_are_enabled
 
   def index
-    @question = Question.order(Arel.sql('RANDOM()')).first
+    
   end
 
   def details_of_the_day
@@ -18,8 +18,11 @@ class ApplicationController < ActionController::Base
   end
 
   def games
+    enabled_games = Game.where(enabled: true)
+    redirect "/" unless enabled_games.any?
 
-    redirect_to '/'
+    @page_title = "Games"
+    @games = enabled_games.all
   end
 
   def church_game
