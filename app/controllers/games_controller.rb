@@ -28,6 +28,25 @@ class GamesController < ActionController::Base
     end
   end
 
+  def submit_answer
+    @game = Game.where(key: params[:key]).first
+    redirect(root_url) unless @game.present?
+
+    @answer = Answer.where(id: params[:answer_id]).first
+    redirect(root_url) unless @answer.present?
+
+    @page_title = "#{@game.name} | Games"
+    @session_id = session.id
+
+    QuizGame::ProcessSubmittedAnswer.new(@game, @session_id, @answer).execute
+
+    if @answer.is_correct
+      render 'games/correct'
+    else
+      render 'games/incorrect'
+    end
+  end
+
   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
   private

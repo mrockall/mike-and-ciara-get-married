@@ -42,6 +42,7 @@ module Import
           game_id: game.id
         })
 
+        question.update_attribute(:enabled, true)
         question.update_attribute(:text, question_data[:text])
 
         import_answers_for_question(question, question_data[:answers])
@@ -57,6 +58,7 @@ module Import
           question_id: question.id
         })
 
+        answer.update_attribute(:enabled, true)
         answer.update_attribute(:text, answer_data[:text])
         answer.update_attribute(:is_correct, answer_data[:is_correct])
       end

@@ -55,7 +55,7 @@ memory-lane-mike:
   description: Take a whirlwind tour through Mike's childhook and answer some simple multiple choice questions.
   questions:
     q1: 
-      text: 'Q1: General Knowledge'
+      text: 'Q1: Memory Lane: Mike'
       answers: 
         a: 
           text: "Correct Answer"
@@ -70,7 +70,7 @@ memory-lane-mike:
           text: "D1: D"
           is_correct: false
     q2: 
-      text: 'Q2: General Knowledge'
+      text: 'Q2: Memory Lane: Mike'
       answers: 
         a: 
           text: "Correct Answer"
@@ -85,7 +85,7 @@ memory-lane-mike:
           text: "D1: D"
           is_correct: false
     q3: 
-      text: 'Q3: General Knowledge'
+      text: 'Q3: Memory Lane: Mike'
       answers: 
         a: 
           text: "Correct Answer"
@@ -106,7 +106,7 @@ memory-lane-ciara:
   description: Take a whirlwind tour through Ciara's childhook and answer some simple multiple choice questions.
   questions:
     q1: 
-      text: 'Q1: General Knowledge'
+      text: 'Q1: Memory Lane Ciara'
       answers: 
         a: 
           text: "Correct Answer"
@@ -121,7 +121,7 @@ memory-lane-ciara:
           text: "D1: D"
           is_correct: false
     q2: 
-      text: 'Q2: General Knowledge'
+      text: 'Q2: Memory Lane Ciara'
       answers: 
         a: 
           text: "Correct Answer"
@@ -136,7 +136,7 @@ memory-lane-ciara:
           text: "D1: D"
           is_correct: false
     q3: 
-      text: 'Q3: General Knowledge'
+      text: 'Q3: Memory Lane Ciara'
       answers: 
         a: 
           text: "Correct Answer"

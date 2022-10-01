@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   get 'games', to: 'games#index'
   get 'games/:key', to: 'games#game'
+  get 'games/:key/submit-answer/:answer_id', to: 'games#submit_answer'
 
   root 'application#index'
 end

@@ -1,7 +1,10 @@
 class Question < ApplicationRecord
 
   belongs_to :game
+
   has_many :answers, dependent: :destroy
+  has_many :enabled_answers, -> { where(enabled: true) }, class_name: 'Answer'
+  
   has_one :correct_answer, -> { where(is_correct: true) }, class_name: 'Answer'
 
   validates_presence_of :game, :text
