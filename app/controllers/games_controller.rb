@@ -2,6 +2,7 @@ class GamesController < ActionController::Base
   layout 'application'
   before_action :check_if_games_are_enabled
   before_action :pass_the_session_id_to_the_view
+  before_action :get_next_three_games
 
   def index
     enabled_games = Game.where(enabled: true)
@@ -56,5 +57,9 @@ class GamesController < ActionController::Base
 
   def pass_the_session_id_to_the_view
     @session_id = session.id
+  end
+
+  def get_next_three_games
+    @next_games = Game.limit(3)
   end
 end

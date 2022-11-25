@@ -1,0 +1,15 @@
+<% if @next_games.present? %>
+<section class="p-6">
+  <header class="mb-4 flex items-center">
+    <span class="flex-grow">
+      <%= render "svg/small_games_header" %>
+    </span>
+    <%= render "components/button", url: "/games", text: "All Games" %>
+  </header>
+  <ul class="grid md:grid-cols-3 grid-cols-1 gap-4">
+    <% @next_games.each do |game| %>
+      <%= render "components/game_panel", game: game %>
+    <% end %>
+  </ul>
+</section>
+<% end %>
