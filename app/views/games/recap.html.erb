@@ -1,24 +1,26 @@
 <section class="py-12 px-6 mx-auto max-w-xl">
   <%= render "svg/games" %>
   <div class="p-4 mb-4 rounded-xl text-stone-500">
-    <h2 class="pb-4 text-2xl text-stone-700"><%= @game.name %></h2>
-
-    <div class="flex gap-4">
+    <h2 class="text-lg font-semibold text-stone-700">
+      <%= @game.name %>
+    </h2>
+    <p class="flex gap-2 items-center uppercase text-xs font-bold tracking-wide text-rose-900 mb-4">
+      <%= @game.questions.count %> Questions
       <% @game.questions.each do |question| %>
         <% answer = question.get_answer_for_session(@session_id) %>
-        <span class="flex-grow h-1 rounded
+        <span class="w-4 h-1 rounded
           <%=
             if answer.present? && answer.is_correct
-              "bg-green-800"
+              "bg-green-900"
             elsif answer.present? && !answer.is_correct
-              "bg-rose-800"
+              "bg-rose-900"
             else
-              "bg-stone-50"
+              "bg-stone-300"
             end
           %>
         "></span>
       <% end %>
-    </div>
+    </p>
   </div>
 
   <% @game.questions.each_with_index do |question, index| %>
@@ -27,7 +29,7 @@
       Question <%= index + 1 %> of <%= @game.questions.count %>
     </p>
 
-    <h3 class="mb-2 text-2xl font-semibold text-stone-700"><%= question.text %></h3>
+    <h3 class="mb-2 text-2xl text-stone-700"><%= question.text %></h3>
     <% question.enabled_answers.each do |answer| %>
       <% submitted_answer = question.get_answer_for_session(@session_id) %>
       <% next unless answer.is_correct || answer.id == submitted_answer.id %>

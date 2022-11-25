@@ -9,7 +9,23 @@
       <h3 class="text-lg font-semibold text-stone-700">
         <%= status == :finished ? "✅ - " : "" %><%= game.name %>
       </h3>
-      <p class="uppercase text-xs font-bold tracking-wide text-rose-900 mb-4"><%= game.questions.count %> Questions</p>
+      <p class="flex gap-2 items-center uppercase text-xs font-bold tracking-wide text-rose-900 mb-4">
+        <%= game.questions.count %> Questions
+        <% game.questions.each do |question| %>
+          <% answer = question.get_answer_for_session(@session_id) %>
+          <span class="w-4 h-1 rounded
+            <%=
+              if answer.present? && answer.is_correct
+                "bg-green-900"
+              elsif answer.present? && !answer.is_correct
+                "bg-rose-900"
+              else
+                "bg-stone-300"
+              end
+            %>
+          "></span>
+        <% end %>
+      </p>
       <p class="mb-4"><%= game.description %></p>
 
       <% if status == :not_started %>
