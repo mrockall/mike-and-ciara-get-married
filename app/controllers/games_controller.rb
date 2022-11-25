@@ -15,7 +15,7 @@ class GamesController < ActionController::Base
 
   def game
     @game = Game.where(key: params[:key]).first
-    redirect_to("/games") unless @game.present?
+    return redirect_to("/games") unless @game.present?
 
     @page_title = "#{@game.name} | Games"
 
@@ -30,10 +30,10 @@ class GamesController < ActionController::Base
 
   def submit_answer
     @game = Game.where(key: params[:key]).first
-    redirect_to("/games") unless @game.present?
+    return redirect_to("/games") unless @game.present?
 
     @answer = Answer.where(id: params[:answer_id]).first
-    redirect_to('/games') unless @answer.present?
+    return redirect_to("/games/#{@game.key}") unless @answer.present?
 
     @page_title = "#{@game.name} | Games"
 
