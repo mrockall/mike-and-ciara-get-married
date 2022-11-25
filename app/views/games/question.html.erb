@@ -29,7 +29,7 @@
     </p>
 
     <h3 class="mb-2 text-2xl font-semibold text-stone-700"><%= @question.text %></h3>
-    <% @question.enabled_answers.shuffle.each do |answer| %>
+    <% @question.enabled_answers.each do |answer| %>
       <div>
         <a href="/games/<%= @game.key %>/submit-answer/<%= answer.id %>" class="inline-flex items-center py-4 px-4 mt-2 w-full text-md font-medium text-stone-700 bg-white rounded-lg border border-stone-200 hover:bg-rose-100 hover:text-rose-900 hover:border-rose-100 focus:z-10 focus:ring-4 focus:outline-none focus:ring-rose-200 focus:text-rose-900">
           <span class="flex-grow"><%= answer.text %></span>

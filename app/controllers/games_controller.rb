@@ -36,14 +36,9 @@ class GamesController < ActionController::Base
     return redirect_to("/games/#{@game.key}") unless @answer.present?
 
     @page_title = "#{@game.name} | Games"
+    @question = @answer.question
 
     QuizGame::ProcessSubmittedAnswer.new(@game, @session_id, @answer).execute
-
-    if @answer.is_correct
-      render 'games/correct'
-    else
-      render 'games/incorrect'
-    end
   end
 
   def start_over

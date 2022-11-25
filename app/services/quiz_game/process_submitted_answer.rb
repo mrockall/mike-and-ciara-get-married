@@ -7,6 +7,9 @@ module QuizGame
     end
 
     def execute
+      existing_answer = SubmittedAnswer.where(question: @answer.question, session_id: @session_id.to_s)
+      return if existing_answer.present?
+      
       SubmittedAnswer.create({
         question: @answer.question,
         answer: @answer,

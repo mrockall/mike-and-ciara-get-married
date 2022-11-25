@@ -1,0 +1,60 @@
+<section class="py-12 px-6 mx-auto max-w-xl">
+  <%= render "svg/games" %>
+  <div class="p-4 mb-4 rounded-xl text-stone-500">
+    <h2 class="pb-4 text-2xl text-stone-700"><%= @game.name %></h2>
+
+    <div class="flex gap-4">
+      <% @game.questions.each do |question| %>
+        <% answer = question.get_answer_for_session(@session_id) %>
+        <span class="flex-grow h-1 rounded
+          <%=
+            if answer.present? && answer.is_correct
+              "bg-green-800"
+            elsif answer.present? && !answer.is_correct
+              "bg-rose-800"
+            else
+              "bg-stone-50"
+            end
+          %>
+        "></span>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="p-4 mb-4 border border-stone-200 rounded-xl text-stone-500">
+    <p class="uppercase text-xs font-bold tracking-wide text-stone-700 mb-2">
+      Question <%= @game.questions.index(@question) + 1 %> of <%= @game.questions.count %>
+    </p>
+
+    <h3 class="mb-2 text-2xl font-semibold text-stone-700"><%= @question.text %></h3>
+    <% @question.enabled_answers.each do |answer| %>
+      <div>
+        <div class="inline-flex items-center py-4 px-4 mt-2 w-full text-md font-medium text-stone-700 bg-white rounded-lg border border-stone-200
+            <%= (answer.id == @answer.id && @answer.is_correct) ? "bg-green-50 border-green-900" : "" %>
+            <%= (answer.id == @answer.id && !@answer.is_correct) ? "bg-rose-50 border-rose-900" : "" %>
+          ">
+          <span class="flex-grow"><%= answer.text %></span>
+          <%= 
+            if answer.id == @answer.id 
+              if @answer.is_correct?
+                "✅"
+              else
+                "❌"
+              end
+            else
+              if answer.is_correct?
+                "✅"
+              end
+            end
+          %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="p-4 mb-4 rounded-xl text-stone-500">
+    <a href="<%= @game.url %>" class="inline-flex items-center py-1 px-2 mt-8 text-sm font-medium text-stone-700 bg-white rounded-lg border border-stone-200 hover:bg-rose-100 hover:text-rose-900 hover:border-rose-100 focus:z-10 focus:ring-4 focus:outline-none focus:ring-rose-200 focus:text-rose-900">Next Question <svg class="ml-2 w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></a>
+  </div>
+</section>
+
+<%= render "components/page_of_photos" %>
