@@ -44,6 +44,7 @@ module Import
 
         question.update_attribute(:enabled, true)
         question.update_attribute(:text, question_data[:text])
+        question.update_attribute(:photo, question_data[:photo]) if question_data.has_key? :photo
 
         import_answers_for_question(question, question_data[:answers])
       end

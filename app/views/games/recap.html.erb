@@ -30,6 +30,12 @@
     </p>
 
     <h3 class="mb-2 text-2xl text-stone-700"><%= question.text %></h3>
+
+    <% if(question.photo) %>
+    <% photo_url = asset_url("quiz/dist/#{question.photo}.webp") %>
+    <div class="bg-rose-100 rounded-lg h-[32rem] bg-cover bg-center" style="background-image: url(<%= photo_url %>)"></div>
+    <% end %>
+
     <% question.enabled_answers.each do |answer| %>
       <% submitted_answer = question.get_answer_for_session(@session_id) %>
       <% next unless answer.is_correct || answer.id == submitted_answer.id %>

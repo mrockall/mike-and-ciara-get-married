@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_10_01_162134) do
+ActiveRecord::Schema.define(version: 2022_11_25_174547) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 2022_10_01_162134) do
     t.integer "count_incorrect", default: 0
     t.string "key"
     t.boolean "enabled"
+    t.string "photo"
   end
 
   create_table "submitted_answers", force: :cascade do |t|

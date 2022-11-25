@@ -1,5 +1,5 @@
 test-quiz--ciara:
-  name: "How well do you know Ciara?"
+  name: "🔢 - How well do you know Ciara?"
   format: quiz
   description: Test your knowledge of Ciara by answering questions on her childhood, career, and favourite things.
   questions:
@@ -65,7 +65,7 @@ test-quiz--ciara:
           is_correct: false
 
 test-quiz--mike:
-  name: "How well do you know Mike?"
+  name: "🔢 - How well do you know Mike?"
   format: quiz
   description: Test your knowledge of Mike by answering questions on his childhood, career, and favourite things.
   questions:
@@ -131,7 +131,7 @@ test-quiz--mike:
           is_correct: false
 
 test-quiz--numbers:
-  name: "The numbers of Ciara & Mike"
+  name: "🔢 - The numbers of Ciara & Mike"
   format: quiz
   description: All of the answers to this quiz are numbers. But which one is the correct one?
   questions:
@@ -182,6 +182,77 @@ test-quiz--numbers:
           is_correct: false
     munster: 
       text: 'Which of these is not in Munster?'
+      answers: 
+        a: 
+          text: "Kilkenny"
+          is_correct: true
+        b: 
+          text: "Clare"
+          is_correct: false
+        c: 
+          text: "Tipperary"
+          is_correct: false
+        d: 
+          text: "Cork"
+          is_correct: false
+
+
+test-quiz--photos:
+  name: "🏞️ - Where in the world?"
+  format: quiz
+  description: Can you guess where in the world each photo was taken?
+  questions:
+    connacht: 
+      text: 'Where was this photo taken?'
+      photo: 'belfast'
+      answers: 
+        a: 
+          text: "Westmeath"
+          is_correct: true
+        b: 
+          text: "Galway"
+          is_correct: false
+        c: 
+          text: "Mayo"
+          is_correct: false
+        d: 
+          text: "Sligo"
+          is_correct: false
+    ulster: 
+      text: 'Where was this photo taken?'
+      photo: 'diamondhill'
+      answers: 
+        a: 
+          text: "Cork"
+          is_correct: true
+        b: 
+          text: "Tyrone"
+          is_correct: false
+        c: 
+          text: "Antrim"
+          is_correct: false
+        d: 
+          text: "Donegal"
+          is_correct: false
+    leinster: 
+      text: 'Where was this photo taken?'
+      photo: 'dubai'
+      answers: 
+        a: 
+          text: "Monaghan"
+          is_correct: true
+        b: 
+          text: "Dublin"
+          is_correct: false
+        c: 
+          text: "Meath"
+          is_correct: false
+        d: 
+          text: "Louth"
+          is_correct: false
+    munster: 
+      text: 'Where was this photo taken?'
+      photo: 'lisbon'
       answers: 
         a: 
           text: "Kilkenny"
