@@ -60,6 +60,6 @@ class GamesController < ActionController::Base
   end
 
   def get_next_three_games
-    @next_games = Game.limit(3)
+    @next_games = Game.order(Arel.sql('RANDOM()')).where(enabled: true).limit(3)
   end
 end
