@@ -5,7 +5,7 @@ class GamesController < ActionController::Base
 
   def index
     enabled_games = Game.where(enabled: true)
-    redirect(root_url) unless enabled_games.any?
+    redirect_to('/') unless enabled_games.any?
 
     @page_title = "Games"
     @games = enabled_games.all
@@ -15,7 +15,7 @@ class GamesController < ActionController::Base
 
   def game
     @game = Game.where(key: params[:key]).first
-    redirect(root_url) unless @game.present?
+    redirect_to("/games") unless @game.present?
 
     @page_title = "#{@game.name} | Games"
 
@@ -30,10 +30,10 @@ class GamesController < ActionController::Base
 
   def submit_answer
     @game = Game.where(key: params[:key]).first
-    redirect(root_url) unless @game.present?
+    redirect_to("/games") unless @game.present?
 
     @answer = Answer.where(id: params[:answer_id]).first
-    redirect(root_url) unless @answer.present?
+    redirect_to('/games') unless @answer.present?
 
     @page_title = "#{@game.name} | Games"
 
@@ -44,6 +44,11 @@ class GamesController < ActionController::Base
     else
       render 'games/incorrect'
     end
+  end
+
+  def start_over
+    reset_session
+    redirect_back_or_to "/games"
   end
 
   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 

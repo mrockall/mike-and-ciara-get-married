@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'rsvp', to: 'application#rsvp'
 
   get 'games', to: 'games#index'
+  get 'games/start-over', to: 'games#start_over'
   get 'games/:key', to: 'games#game'
   get 'games/:key/submit-answer/:answer_id', to: 'games#submit_answer'
 
