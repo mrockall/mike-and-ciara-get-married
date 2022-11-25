@@ -1,10 +1,17 @@
 <section class="py-12 px-6 mx-auto max-w-xl">
+  <%= render "svg/games" %>
   <% @games.each do |game| %>
-    <div class="p-4 mb-4 border border-stone-200 rounded-xl text-stone-500">
-      <h3 class="text-lg font-semibold text-stone-700"><%= game.name %></h3>
+    <% status = game.status_for_session(@session_id) %>
+    <div class="p-4 mb-4 border border-stone-200 rounded-xl text-stone-500
+      <%= status == :finished ? "opacity-75" : "" %>
+      <%= status == :in_progress ? "bg-rose-50 border-rose-200" : "" %>
+      ">
+      <h3 class="text-lg font-semibold text-stone-700">
+        <%= status == :finished ? "✅ - " : "" %><%= game.name %>
+      </h3>
+      <p class="uppercase text-xs font-bold tracking-wide text-rose-900 mb-4"><%= game.questions.count %> Questions</p>
       <p class="mb-4"><%= game.description %></p>
 
-      <% status = game.status_for_session(@session_id) %>
       <% if status == :not_started %>
       <div>
         <%= render "components/button", url: game.url, text: "Play" %>
@@ -17,7 +24,6 @@
 
       <% elsif status == :finished %>
       <div>
-        <p class="mb-4">Huzzah! You're finished.</p>
         <%= render "components/button", url: game.url, text: "Recap" %>
       </div>
       <% end %>
@@ -26,7 +32,7 @@
   <% end %>
 
   <% if Rails.env.development? %>
-    <div class="p-4 mb-4 bg-yellow-50 border border-yellow-200 rounded-xl text-stone-500">
+    <div class="p-4 mt-24 bg-yellow-50 border border-yellow-200 rounded-xl text-stone-500">
       <p class="mb-4">For development purposes only.</p>
       <%= render "components/button", url: "/games/start-over", text: "Clear Game Progress" %>
     </div>
