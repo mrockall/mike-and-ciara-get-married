@@ -1,5 +1,4 @@
 class Game < ApplicationRecord
-
   FORMAT = {
     quiz: 'quiz'
   }
@@ -9,5 +8,9 @@ class Game < ApplicationRecord
 
   def url
     "/games/#{self.key}"
+  end
+
+  def status_for_session(session_id)
+    QuizGame::GetStatusForSession.new(self, session_id).execute
   end
 end

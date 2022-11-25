@@ -1,7 +1,24 @@
-<header class="py-12 px-6 mx-auto max-w-xl">
-  <div class="p-4 mb-4 border border-stone-200 rounded-xl text-stone-500">
-    <h3 class="text-lg font-semibold text-stone-700">Recap</h3>
-  </div>
-</header>
+<section class="py-12 px-6 mx-auto max-w-xl">
+  <h3 class="text-lg font-semibold text-stone-700"><%= @game.name %></h3>
+
+  <p>75%</p>
+
+  <ol class="relative border-l border-rose-200">
+  <% @game.enabled_questions.each do |question| %>
+    <li class="mb-10 ml-4 text-stone-700">
+      <div class="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 border border-rose-200 bg-rose-200"></div>
+
+      <h4 class="text-lg text-stone-700"><%= question.text %></h4>
+
+      <% answer = question.get_answer_for_session(@session_id) %>
+      <% if answer.is_correct %>
+        <p class="mb-4">✅ - <%= answer.text %></p>
+      <% else %>
+      <p class="mb-4">❌ - <%= answer.text %></p>
+      <% end %>
+    </li>
+  <% end %>
+</ol>
+</section>
 
 <%= render "components/page_of_photos" %>

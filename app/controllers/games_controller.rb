@@ -1,6 +1,7 @@
 class GamesController < ActionController::Base
   layout 'application'
   before_action :check_if_games_are_enabled
+  before_action :pass_the_session_id_to_the_view
 
   def index
     enabled_games = Game.where(enabled: true)
@@ -17,7 +18,6 @@ class GamesController < ActionController::Base
     redirect(root_url) unless @game.present?
 
     @page_title = "#{@game.name} | Games"
-    @session_id = session.id
 
     @question = QuizGame::GetNextUnansweredQuestion.new(@game, @session_id).execute
 
@@ -36,7 +36,6 @@ class GamesController < ActionController::Base
     redirect(root_url) unless @answer.present?
 
     @page_title = "#{@game.name} | Games"
-    @session_id = session.id
 
     QuizGame::ProcessSubmittedAnswer.new(@game, @session_id, @answer).execute
 
@@ -53,5 +52,9 @@ class GamesController < ActionController::Base
 
   def check_if_games_are_enabled
     @games_are_enabled = Game.where(enabled: true).any?
+  end
+
+  def pass_the_session_id_to_the_view
+    @session_id = session.id
   end
 end
