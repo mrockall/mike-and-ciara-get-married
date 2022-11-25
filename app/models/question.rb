@@ -22,7 +22,8 @@ class Question < ApplicationRecord
     query = SubmittedAnswer.where(question_id: self.id)
     query = query.where(session_id: session_id.to_s)
     submitted_answer = query.first
-
+    return nil unless submitted_answer.present?
+    
     submitted_answer.answer
   end
 end
