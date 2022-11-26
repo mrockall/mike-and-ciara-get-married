@@ -196,9 +196,79 @@ test-quiz--numbers:
           text: "Cork"
           is_correct: false
 
+test-quiz--photos:
+  name: "🏞️ - Where in the world? (Part I)"
+  format: quiz
+  description: Can you guess where in the world each photo was taken?
+  questions:
+    connacht: 
+      text: 'Where was this photo taken?'
+      photo: 'belfast'
+      answers: 
+        a: 
+          text: "Westmeath"
+          is_correct: true
+        b: 
+          text: "Galway"
+          is_correct: false
+        c: 
+          text: "Mayo"
+          is_correct: false
+        d: 
+          text: "Sligo"
+          is_correct: false
+    ulster: 
+      text: 'Where was this photo taken?'
+      photo: 'diamondhill'
+      answers: 
+        a: 
+          text: "Cork"
+          is_correct: true
+        b: 
+          text: "Tyrone"
+          is_correct: false
+        c: 
+          text: "Antrim"
+          is_correct: false
+        d: 
+          text: "Donegal"
+          is_correct: false
+    leinster: 
+      text: 'Where was this photo taken?'
+      photo: 'dubai'
+      answers: 
+        a: 
+          text: "Monaghan"
+          is_correct: true
+        b: 
+          text: "Dublin"
+          is_correct: false
+        c: 
+          text: "Meath"
+          is_correct: false
+        d: 
+          text: "Louth"
+          is_correct: false
+    munster: 
+      text: 'Where was this photo taken?'
+      photo: 'lisbon'
+      answers: 
+        a: 
+          text: "Kilkenny"
+          is_correct: true
+        b: 
+          text: "Clare"
+          is_correct: false
+        c: 
+          text: "Tipperary"
+          is_correct: false
+        d: 
+          text: "Cork"
+          is_correct: false
+
 
 test-quiz--photos:
-  name: "🏞️ - Where in the world?"
+  name: "🏞️ - Where in the world? (Part II)"
   format: quiz
   description: Can you guess where in the world each photo was taken?
   questions:
