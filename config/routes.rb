@@ -1,4 +1,8 @@
+require 'sidekiq/web'
+
 Rails.application.routes.draw do
+  mount Sidekiq::Web => '/sidekiq'
+
   post 'answer', to: 'application#answer'
 
   get 'details-of-the-day', to: 'application#details_of_the_day'

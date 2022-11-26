@@ -22,7 +22,7 @@ module QuizGame
     private
 
     def send_quiz_completed_notification
-      QuizMailer.with(game: @game, session_id: @session_id).quiz_completed_notification.deliver
+      QuizMailer.with(game: @game, session_id: @session_id.to_s).quiz_completed_notification.deliver_later
     end
 
     def quiz_is_now_completed?
