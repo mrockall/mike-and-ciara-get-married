@@ -1,4 +1,4 @@
-FROM ruby:2.7
+FROM ruby:2.7.6
 RUN apt-get update -qq && apt-get install -y nodejs postgresql-client vim
 ENV EDITOR="vim"
 RUN mkdir /wedding
