@@ -7,12 +7,38 @@ services:
     environment:
       POSTGRES_PASSWORD: example
 
+  redis:
+    image: "redis:7.0.5-bullseye"
+    ports:
+      - '6379:6379'
+    volumes:
+      - "redis:/data"
+
+  worker:
+    depends_on:
+      - db
+      - redis
+    build: .
+    command: bundle exec sidekiq -C config/sidekiq.yml
+    volumes:
+      - .:/wedding
+    environment:
+      - REDISTOGO_URL=redis://redis:6379/1
+      - REDIS_PROVIDER=REDISTOGO_URL
+
   web:
+    depends_on:
+      - db
+      - redis
     build: .
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
       - .:/wedding
     ports:
       - "3000:3000"
-    depends_on:
-      - db
+    environment:
+      - REDISTOGO_URL=redis://redis:6379/1
+      - REDIS_PROVIDER=REDISTOGO_URL
+
+volumes:
+  redis:
