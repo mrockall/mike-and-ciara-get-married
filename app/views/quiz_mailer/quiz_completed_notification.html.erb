@@ -1,13 +1,32 @@
+<h1><%= @game.name %></h1>
+
 <ul>
-  <li><b>Quiz:</b> <%= @game.name %></li>
   <li><b>Session ID:</b> <%= @session_id %></li>
-  <li>They got XX%, by getting X out of Y questions correct.</li>
-  <li>This is the first quiz that they have completed.</li>
-  <li>It's the X time that this quiz has been completed</li>
 </ul>
-<ul>
-  <li>Question #1: Answer</li>
-  <li>Question #2: Answer</li>
-  <li>Question #3: Answer</li>
-  <li>Question #4: Answer</li>
-</ul>
+
+<% @game.questions.each_with_index do |question, index| %>
+  <hr />
+  <h3><%= index + 1 %> of <%= @game.questions.count %>: <%= question.text %></h3>
+
+  <ul>
+  <% question.enabled_answers.each do |answer| %>
+    <% submitted_answer = question.get_answer_for_session(@session_id) %>
+    <li>
+      <%= 
+        if answer.id == submitted_answer.id 
+          if submitted_answer.is_correct?
+            "✅ - "
+          else
+            "❌ - "
+          end
+        else
+          if answer.is_correct?
+            "✅ - "
+          end
+        end
+      %>
+      <%= answer.text %>
+    </li>
+  <% end %>
+  </ul>
+<% end %>
