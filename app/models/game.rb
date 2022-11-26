@@ -10,6 +10,14 @@ class Game < ApplicationRecord
     "/games/#{self.key}"
   end
 
+  def is_enabled_and_available?
+    if self.available_after_date.present?
+      return self.enabled && !Date.today.before?(self.available_after_date)
+    end
+
+    self.enabled
+  end
+
   def status_for_session(session_id)
     QuizGame::GetStatusForSession.new(self, session_id).execute
   end

@@ -199,6 +199,7 @@ test-quiz--numbers:
 test-quiz--photos-i:
   name: "🏞️ - Where in the world? (Part I)"
   format: quiz
+  available_after_date: 26-11-2022
   description: Can you guess where in the world each photo was taken?
   questions:
     connacht: 
@@ -266,10 +267,10 @@ test-quiz--photos-i:
           text: "Cork"
           is_correct: false
 
-
 test-quiz--photos-ii:
   name: "🏞️ - Where in the world? (Part II)"
   format: quiz
+  available_after_date: 27-11-2022
   description: Can you guess where in the world each photo was taken?
   questions:
     connacht: 

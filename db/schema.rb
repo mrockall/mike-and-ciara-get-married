@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_25_174547) do
-
+ActiveRecord::Schema[7.0].define(version: 2022_11_26_165037) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -19,8 +18,8 @@ ActiveRecord::Schema.define(version: 2022_11_25_174547) do
     t.integer "question_id"
     t.string "text"
     t.boolean "is_correct", default: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.integer "count_chosen", default: 0
     t.string "key"
     t.boolean "enabled"
@@ -30,15 +29,16 @@ ActiveRecord::Schema.define(version: 2022_11_25_174547) do
     t.string "name"
     t.boolean "enabled"
     t.string "format"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "key"
     t.text "description"
+    t.date "available_after_date"
   end
 
   create_table "questions", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.integer "game_id"
     t.text "text"
     t.integer "count_correct", default: 0
@@ -52,8 +52,8 @@ ActiveRecord::Schema.define(version: 2022_11_25_174547) do
     t.integer "question_id"
     t.integer "answer_id"
     t.string "session_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

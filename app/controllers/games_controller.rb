@@ -5,7 +5,7 @@ class GamesController < ActionController::Base
   before_action :get_next_three_games
 
   def index
-    enabled_games = Game.where(enabled: true)
+    enabled_games = Game.where(enabled: true).order(:id)
     redirect_to('/') unless enabled_games.any?
 
     @page_title = "Games"
@@ -17,6 +17,7 @@ class GamesController < ActionController::Base
   def game
     @game = Game.where(key: params[:key]).first
     return redirect_to("/games") unless @game.present?
+    return redirect_to("/games") unless @game.is_enabled_and_available?
 
     @page_title = "#{@game.name} | Games"
 
@@ -32,6 +33,7 @@ class GamesController < ActionController::Base
   def submit_answer
     @game = Game.where(key: params[:key]).first
     return redirect_to("/games") unless @game.present?
+    return redirect_to("/games") unless @game.is_enabled_and_available?
 
     @answer = Answer.where(id: params[:answer_id]).first
     return redirect_to("/games/#{@game.key}") unless @answer.present?

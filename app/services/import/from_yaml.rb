@@ -27,6 +27,10 @@ module Import
         game.update_attribute(:name, game_data[:name])
         game.update_attribute(:format, game_data[:format])
 
+        if game_data.has_key? :available_after_date
+          game.update_attribute(:available_after_date, game_data[:available_after_date]) 
+        end
+
         import_questions_for_game(game, game_data[:questions])
       end
     end

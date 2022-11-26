@@ -25,7 +25,11 @@
   </p>
   <p class="mb-4"><%= game.description %></p>
 
-  <% if status == :not_started %>
+
+  <% if game.available_after_date && Date.today.before?(game.available_after_date) %>
+  <p class="text-rose-900">Available to play on <%= game.available_after_date.strftime('%e %B %Y') %></p>
+
+  <% elsif status == :not_started %>
   <div>
     <%= render "components/button", url: game.url, text: "Play" %>
   </div>
