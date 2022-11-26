@@ -3,7 +3,7 @@ class Game < ApplicationRecord
     quiz: 'quiz'
   }
 
-  has_many :questions
+  has_many :questions, dependent: :destroy
   has_many :enabled_questions, -> { where(enabled: true) }, class_name: 'Question'
 
   def url
