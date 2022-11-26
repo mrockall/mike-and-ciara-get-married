@@ -11,7 +11,7 @@ I'm still figuring all of this stuff out. Will add new commands here so I don't 
 docker compose up
 
 # To edit the credentials within the container
-docker exec -it wedding-trivia-web-1 bin/rails credentials:edit
+docker compose exec web bin/rails credentials:edit
 
 # Use this to run normal rails commands. Will spawn a new container and leave it.
 docker compose run web CMD
