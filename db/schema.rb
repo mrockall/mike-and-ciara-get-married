@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_26_165037) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_27_143145) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -48,10 +48,21 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_26_165037) do
     t.string "photo"
   end
 
-  create_table "submitted_answers", force: :cascade do |t|
+  create_table "session_game_answers", force: :cascade do |t|
     t.integer "question_id"
     t.integer "answer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "session_game_id"
+  end
+
+  create_table "session_games", force: :cascade do |t|
     t.string "session_id"
+    t.integer "game_id"
+    t.string "status"
+    t.integer "count_correct"
+    t.integer "count_incorrect"
+    t.integer "count_remaining"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

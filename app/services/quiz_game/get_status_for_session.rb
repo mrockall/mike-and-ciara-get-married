@@ -2,26 +2,18 @@ module QuizGame
   class GetStatusForSession
     def initialize(game, session_id)
       @game = game
-      @session_id = session_id
+      @session_id = session_id.to_s
     end
 
     def execute
-      question_ids = @game.enabled_questions.pluck(:id)
-      
-      query = SubmittedAnswer.where(session_id: @session_id.to_s)
-      query = query.where(question_id: question_ids)
-      questions_with_answers = query.pluck(:question_id)
+      session_game = SessionGame.where({
+        game: @game,
+        session_id: @session_id
+      }).first
 
-      remaining_questions = question_ids - questions_with_answers
+      return :not_started if session_game.nil?
 
-      case remaining_questions.length
-      when 0
-        :finished
-      when question_ids.length
-        :not_started
-      else
-        :in_progress
-      end
+      session_game.status.to_sym
     end
   end
 end

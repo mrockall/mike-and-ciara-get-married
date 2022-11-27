@@ -1,7 +1,7 @@
 class QuizMailer < ApplicationMailer
   def quiz_completed_notification
-    @game = params[:game]
-    @session_id = params[:session_id]
+    @session_game = params[:session_game]
+    @game = @session_game.game
 
     to = Rails.application.credentials.gmail.to.email
     subject = "Someone completed the #{@game.name} quiz"

@@ -2,38 +2,43 @@ module QuizGame
   class ProcessSubmittedAnswer
     def initialize(game, session_id, answer)
       @game = game
-      @session_id = session_id
+      @session_id = session_id.to_s
       @answer = answer
     end
 
     def execute
-      existing_answer = SubmittedAnswer.where(question: @answer.question, session_id: @session_id.to_s)
+      session_game = find_or_create_session_game
+      return unless session_game.present?
+
+      existing_answer = SessionGameAnswer.where({
+        session_game: session_game,
+        question: @answer.question
+      })
       return if existing_answer.present?
       
-      SubmittedAnswer.create!({
+      SessionGameAnswer.create!({
+        session_game: session_game,
         question: @answer.question,
-        answer: @answer,
-        session_id: @session_id.to_s
+        answer: @answer
       })
 
-      send_quiz_completed_notification if quiz_is_now_completed?
+      if @answer.is_correct
+        session_game.increment :count_correct
+      else
+        session_game.increment :count_incorrect
+      end
+
+      remaining_count = @game.enabled_questions.count - session_game.count_correct - session_game.count_incorrect
+      session_game.update_attribute :count_remaining, remaining_count
     end
 
     private
 
-    def send_quiz_completed_notification
-      QuizMailer.with(game: @game, session_id: @session_id.to_s).quiz_completed_notification.deliver_later
-    end
-
-    def quiz_is_now_completed?
-      enabled_question_ids = @game.enabled_question_ids
-
-      # We can determine if the quiz is complete, if we have an answer for
-      # every enabled question. The uniqueness constraint on the answer model
-      # will ensure we only have one answer per question.
-      query = SubmittedAnswer.where(session_id: @session_id.to_s)
-      query = query.where(question_id: enabled_question_ids)
-      query.count == enabled_question_ids.count
+    def find_or_create_session_game
+      SessionGame.find_or_create_by({
+        game: @game,
+        session_id: @session_id
+      })
     end
   end
 end
