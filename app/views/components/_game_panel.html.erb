@@ -1,6 +1,6 @@
 <% status = game.status_for_session(@session_id) %>
-<div class="p-4 mb-4 border border-stone-200 rounded-xl text-stone-500
-  <%= status == :finished ? "opacity-75" : "" %>
+<a href="<%= game.url %>" class="p-4 mb-4 border border-stone-200 rounded-xl text-stone-500 hover:bg-rose-100 hover:text-rose-900 hover:border-rose-100 focus:z-10 focus:ring-4 focus:outline-none focus:ring-rose-200 focus:text-rose-900
+  <%= status == :finished ? "opacity-50" : "" %>
   <%= status == :in_progress ? "bg-rose-50 border-rose-200" : "" %>
   ">
   <h3 class="text-lg font-semibold text-stone-700">
@@ -30,18 +30,21 @@
   <p class="text-rose-900">Available to play on <%= game.available_after_date.strftime('%e %B %Y') %></p>
 
   <% elsif status == :not_started %>
-  <div>
-    <%= render "components/button", url: game.url, text: "Play" %>
+  <div class="inline-flex items-center font-semibold">
+    Play
+    <%= render "svg/small_arrow_right" %>
   </div>
 
   <% elsif status == :in_progress %>
-  <div>
-    <%= render "components/button", url: game.url, text: "Continue" %>
+  <div class="inline-flex items-center font-semibold">
+    Continue
+    <%= render "svg/small_arrow_right" %>
   </div>
 
   <% elsif status == :finished %>
-  <div>
-    <%= render "components/button", url: game.url, text: "Recap" %>
+  <div class="inline-flex items-center font-semibold">
+    Recap
+    <%= render "svg/small_arrow_right" %>
   </div>
   <% end %>
-</div>
+</a>
