@@ -1,7 +1,9 @@
+<% enabled_and_available = game.is_enabled_and_available? %>
 <% status = game.status_for_session(@session_id) %>
 <a href="<%= game.url %>" class="p-4 mb-4 border border-stone-200 rounded-xl text-stone-500 hover:bg-rose-100 hover:text-rose-900 hover:border-rose-100 focus:z-10 focus:ring-4 focus:outline-none focus:ring-rose-200 focus:text-rose-900
   <%= status == :finished ? "opacity-50" : "" %>
   <%= status == :in_progress ? "bg-rose-50 border-rose-200" : "" %>
+  <%= !enabled_and_available ? "pointer-events-none" : "" %>
   ">
   <h3 class="text-lg font-semibold text-stone-700">
     <%= status == :finished ? "✅ - " : "" %><%= game.name %>
@@ -26,7 +28,7 @@
   <p class="mb-4"><%= game.description %></p>
 
 
-  <% if game.available_after_date && Date.today.before?(game.available_after_date) %>
+  <% if !enabled_and_available %>
   <p class="text-rose-900">Available to play on <%= game.available_after_date.strftime('%e %B %Y') %></p>
 
   <% elsif status == :not_started %>

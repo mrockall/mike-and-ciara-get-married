@@ -270,7 +270,7 @@ test-quiz--photos-i:
 test-quiz--photos-ii:
   name: "🏞️ - Where in the world? (Part II)"
   format: quiz
-  available_after_date: 27-11-2022
+  available_after_date: 30-11-2022
   description: Can you guess where in the world each photo was taken?
   questions:
     connacht: 
