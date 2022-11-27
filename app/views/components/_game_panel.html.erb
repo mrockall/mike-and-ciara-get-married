@@ -29,30 +29,38 @@
   
   <p class="mb-4"><%= game.description %></p>
 
-  <p class="uppercase text-xs font-bold tracking-wide mb-4">
-    Easy - Times Played: 10 - Average Score: 66%
-  </p>
-
-
   <% if !enabled_and_available %>
-  <p class="text-rose-900">Available to play on <%= game.available_after_date.strftime('%e %B %Y') %></p>
+    <p class="text-rose-900">Available to play on <%= game.available_after_date.strftime('%e %B %Y') %></p>
 
-  <% elsif status == :not_started %>
-  <div class="inline-flex items-center font-semibold">
-    Play
-    <%= render "svg/small_arrow_right" %>
-  </div>
+  <% else %>
+    <p class="uppercase text-xs font-bold tracking-wide mb-4">
+      <% if game.session_games.count == 0 %>
+        Want to be the first to try this quiz?
+      <% else %>
+        <% avg_score = game.average_score %>
+        <%= avg_score > 66 ? "Easy" : (avg_score < 33 ? "Hard" : "Medium") %> - 
+        Times Played: <%= game.session_games.count %> - 
+        Average Score: <%= avg_score %>%
+      <% end %>
+    </p>
 
-  <% elsif status == :in_progress %>
-  <div class="inline-flex items-center font-semibold">
-    Continue
-    <%= render "svg/small_arrow_right" %>
-  </div>
+    <% if status == :not_started %>
+      <div class="inline-flex items-center font-semibold">
+        Play
+        <%= render "svg/small_arrow_right" %>
+      </div>
 
-  <% elsif status == :finished %>
-  <div class="inline-flex items-center font-semibold">
-    Recap
-    <%= render "svg/small_arrow_right" %>
-  </div>
+    <% elsif status == :in_progress %>
+      <div class="inline-flex items-center font-semibold">
+        Continue
+        <%= render "svg/small_arrow_right" %>
+      </div>
+
+    <% elsif status == :finished %>
+      <div class="inline-flex items-center font-semibold">
+        Recap
+        <%= render "svg/small_arrow_right" %>
+      </div>
+    <% end %>
   <% end %>
 </a>

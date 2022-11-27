@@ -22,4 +22,12 @@ class Game < ApplicationRecord
   def status_for_session(session_id)
     QuizGame::GetStatusForSession.new(self, session_id).execute
   end
+
+  def average_score
+    count_correct = self.session_games.sum :count_correct
+    count_incorrect = self.session_games.sum :count_incorrect
+    return nil if count_correct + count_incorrect == 0
+
+    ((count_correct / (count_correct + count_incorrect).to_f) * 100).round
+  end
 end
