@@ -1,406 +1,353 @@
-test-quiz--ciara:
-  name: "🔢 - How well do you know Ciara?"
+the-easy-mike-quiz:
+  name: "🔢 - The Easy Mike Quiz"
   format: quiz
-  description: Test your knowledge of Ciara by answering questions on her childhood, career, and favourite things.
-  questions:
-    connacht: 
-      text: 'Which of these is not in Connacht?'
-      answers: 
-        a: 
-          text: "Westmeath"
-          is_correct: true
-        b: 
-          text: "Galway"
-          is_correct: false
-        c: 
-          text: "Mayo"
-          is_correct: false
-        d: 
-          text: "Sligo"
-          is_correct: false
-    ulster: 
-      text: 'Which of these is not in Ulster?'
-      answers: 
-        a: 
-          text: "Cork"
-          is_correct: true
-        b: 
-          text: "Tyrone"
-          is_correct: false
-        c: 
-          text: "Antrim"
-          is_correct: false
-        d: 
-          text: "Donegal"
-          is_correct: false
-    leinster: 
-      text: 'Which of these is not in Leinster?'
-      answers: 
-        a: 
-          text: "Monaghan"
-          is_correct: true
-        b: 
-          text: "Dublin"
-          is_correct: false
-        c: 
-          text: "Meath"
-          is_correct: false
-        d: 
-          text: "Louth"
-          is_correct: false
-    munster: 
-      text: 'Which of these is not in Munster?'
-      answers: 
-        a: 
-          text: "Kilkenny"
-          is_correct: true
-        b: 
-          text: "Clare"
-          is_correct: false
-        c: 
-          text: "Tipperary"
-          is_correct: false
-        d: 
-          text: "Cork"
-          is_correct: false
-
-test-quiz--mike:
-  name: "🔢 - How well do you know Mike?"
-  format: quiz
-  description: Test your knowledge of Mike by answering questions on his childhood, career, and favourite things.
-  questions:
-    connacht: 
-      text: 'Which of these is not in Connacht?'
-      answers: 
-        a: 
-          text: "Westmeath"
-          is_correct: true
-        b: 
-          text: "Galway"
-          is_correct: false
-        c: 
-          text: "Mayo"
-          is_correct: false
-        d: 
-          text: "Sligo"
-          is_correct: false
-    ulster: 
-      text: 'Which of these is not in Ulster?'
-      answers: 
-        a: 
-          text: "Cork"
-          is_correct: true
-        b: 
-          text: "Tyrone"
-          is_correct: false
-        c: 
-          text: "Antrim"
-          is_correct: false
-        d: 
-          text: "Donegal"
-          is_correct: false
-    leinster: 
-      text: 'Which of these is not in Leinster?'
-      answers: 
-        a: 
-          text: "Monaghan"
-          is_correct: true
-        b: 
-          text: "Dublin"
-          is_correct: false
-        c: 
-          text: "Meath"
-          is_correct: false
-        d: 
-          text: "Louth"
-          is_correct: false
-    munster: 
-      text: 'Which of these is not in Munster?'
-      answers: 
-        a: 
-          text: "Kilkenny"
-          is_correct: true
-        b: 
-          text: "Clare"
-          is_correct: false
-        c: 
-          text: "Tipperary"
-          is_correct: false
-        d: 
-          text: "Cork"
-          is_correct: false
-
-test-quiz--numbers:
-  name: "🔢 - The numbers of Ciara & Mike"
-  format: quiz
-  description: All of the answers to this quiz are numbers. But which one is the correct one?
-  questions:
-    connacht: 
-      text: 'Which of these is not in Connacht?'
-      answers: 
-        a: 
-          text: "Westmeath"
-          is_correct: true
-        b: 
-          text: "Galway"
-          is_correct: false
-        c: 
-          text: "Mayo"
-          is_correct: false
-        d: 
-          text: "Sligo"
-          is_correct: false
-    ulster: 
-      text: 'Which of these is not in Ulster?'
-      answers: 
-        a: 
-          text: "Cork"
-          is_correct: true
-        b: 
-          text: "Tyrone"
-          is_correct: false
-        c: 
-          text: "Antrim"
-          is_correct: false
-        d: 
-          text: "Donegal"
-          is_correct: false
-    leinster: 
-      text: 'Which of these is not in Leinster?'
-      answers: 
-        a: 
-          text: "Monaghan"
-          is_correct: true
-        b: 
-          text: "Dublin"
-          is_correct: false
-        c: 
-          text: "Meath"
-          is_correct: false
-        d: 
-          text: "Louth"
-          is_correct: false
-    munster: 
-      text: 'Which of these is not in Munster?'
-      answers: 
-        a: 
-          text: "Kilkenny"
-          is_correct: true
-        b: 
-          text: "Clare"
-          is_correct: false
-        c: 
-          text: "Tipperary"
-          is_correct: false
-        d: 
-          text: "Cork"
-          is_correct: false
-
-test-quiz--photos-i:
-  name: "🏞️ - Where in the world? (Part I)"
-  format: quiz
-  available_after_date: 26-11-2022
-  description: Can you guess where in the world each photo was taken?
-  questions:
-    connacht: 
-      text: 'Where was this photo taken?'
-      photo: 'belfast'
-      answers: 
-        a: 
-          text: "Westmeath"
-          is_correct: true
-        b: 
-          text: "Galway"
-          is_correct: false
-        c: 
-          text: "Mayo"
-          is_correct: false
-        d: 
-          text: "Sligo"
-          is_correct: false
-    ulster: 
-      text: 'Where was this photo taken?'
-      photo: 'diamondhill'
-      answers: 
-        a: 
-          text: "Cork"
-          is_correct: true
-        b: 
-          text: "Tyrone"
-          is_correct: false
-        c: 
-          text: "Antrim"
-          is_correct: false
-        d: 
-          text: "Donegal"
-          is_correct: false
-    leinster: 
-      text: 'Where was this photo taken?'
-      photo: 'dubai'
-      answers: 
-        a: 
-          text: "Monaghan"
-          is_correct: true
-        b: 
-          text: "Dublin"
-          is_correct: false
-        c: 
-          text: "Meath"
-          is_correct: false
-        d: 
-          text: "Louth"
-          is_correct: false
-    munster: 
-      text: 'Where was this photo taken?'
-      photo: 'lisbon'
-      answers: 
-        a: 
-          text: "Kilkenny"
-          is_correct: true
-        b: 
-          text: "Clare"
-          is_correct: false
-        c: 
-          text: "Tipperary"
-          is_correct: false
-        d: 
-          text: "Cork"
-          is_correct: false
-
-test-quiz--photos-ii:
-  name: "🏞️ - Where in the world? (Part II)"
-  format: quiz
-  available_after_date: 30-11-2022
-  description: Can you guess where in the world each photo was taken?
-  questions:
-    connacht: 
-      text: 'Where was this photo taken?'
-      photo: 'belfast'
-      answers: 
-        a: 
-          text: "Westmeath"
-          is_correct: true
-        b: 
-          text: "Galway"
-          is_correct: false
-        c: 
-          text: "Mayo"
-          is_correct: false
-        d: 
-          text: "Sligo"
-          is_correct: false
-    ulster: 
-      text: 'Where was this photo taken?'
-      photo: 'diamondhill'
-      answers: 
-        a: 
-          text: "Cork"
-          is_correct: true
-        b: 
-          text: "Tyrone"
-          is_correct: false
-        c: 
-          text: "Antrim"
-          is_correct: false
-        d: 
-          text: "Donegal"
-          is_correct: false
-    leinster: 
-      text: 'Where was this photo taken?'
-      photo: 'dubai'
-      answers: 
-        a: 
-          text: "Monaghan"
-          is_correct: true
-        b: 
-          text: "Dublin"
-          is_correct: false
-        c: 
-          text: "Meath"
-          is_correct: false
-        d: 
-          text: "Louth"
-          is_correct: false
-    munster: 
-      text: 'Where was this photo taken?'
-      photo: 'lisbon'
-      answers: 
-        a: 
-          text: "Kilkenny"
-          is_correct: true
-        b: 
-          text: "Clare"
-          is_correct: false
-        c: 
-          text: "Tipperary"
-          is_correct: false
-        d: 
-          text: "Cork"
-          is_correct: false
-
-
-basics--mike:
-  name: "🔢 - The Basics (Mike)"
-  format: quiz
-  description: Get started with this easy quiz that covers some of the basics of 
+  description: Get started with this straightforward multiple choice quiz that covers some of the basics about Mike.
   questions:
     one: 
-      text: 'Which county is Mike from?'
-      answers: 
-        a: 
-          text: "Mayo"
-          is_correct: true
-        b: 
-          text: "Galway"
-          is_correct: true
-        c: 
-          text: "Tyrone"
-          is_correct: false
-        d: 
-          text: "Dublin"
-          is_correct: false
-    two: 
       text: 'Which Premier League team does Mike support?'
       answers: 
         a: 
-          text: "Man City"
-          is_correct: false
-        b: 
-          text: "Man Utd"
-          is_correct: false
-        c: 
           text: "Liverpool"
           is_correct: true
+        b: 
+          text: "Man Utd"
+        c: 
+          text: "Man City"
         d: 
           text: "Chelsea"
-          is_correct: false
+    two: 
+      text: 'Mike drove the same car for 13 years - what kind of car was it?'
+      answers: 
+        a: 
+          text: "Volkswagon Golf"
+        b: 
+          text: "Peugeot 206"
+        c: 
+          text: "Ford Focus"
+        d: 
+          text: "Renault Clio"
+          is_correct: true
     three: 
+      text: "What is the name of Mike's twin?"
+      answers: 
+        a: 
+          text: "Liam"
+        b: 
+          text: "Claire"
+          is_correct: true
+        c: 
+          text: "Emma"
+        d: 
+          text: "Eoin"
+    four: 
       text: 'What does Mike do for a living?'
       answers: 
         a: 
-          text: "Software Engineer"
+          text: "He's a software engineer"
           is_correct: true
         b: 
-          text: "Secondary School Teacher"
-          is_correct: false
+          text: "He's an architect"
         c: 
-          text: "Pilot"
-          is_correct: false
+          text: "He's a pilot"
         d: 
-          text: "Dentist"
-          is_correct: false
-    four: 
-      text: 'Where was this photo taken?'
+          text: "He's an accountant"
+    five: 
+      text: "What is Mike's favourite drink?"
       answers: 
         a: 
-          text: "Kilkenny"
+          text: "Coffee"
           is_correct: true
         b: 
-          text: "Clare"
-          is_correct: false
+          text: "Tea"
         c: 
-          text: "Tipperary"
-          is_correct: false
+          text: "Wine"
+        d: 
+          text: "Water"
+
+the-easy-ciara-quiz:
+  name: "🔢 - The Easy Ciara Quiz"
+  format: quiz
+  description: Get started with this straightforward multiple choice quiz that covers some of the basics about Ciara.
+  questions:
+    one: 
+      text: 'Which town is Ciara from?'
+      answers: 
+        a: 
+          text: "Threemilehouse"
+        b: 
+          text: "Fourmilewater"
+        c: 
+          text: "Fivemiletown"
+          is_correct: true
+        d: 
+          text: "Sixmilebridge"
+    two: 
+      text: 'What did Ciara study in college?'
+      answers: 
+        a: 
+          text: "Accountancy"
+        b: 
+          text: "Biomedical Engineering"
+          is_correct: true
+        c: 
+          text: "Medicine"
+        d: 
+          text: "Nursing"
+    three: 
+      text: "Where was Ciara's first job?"
+      answers: 
+        a: 
+          text: "In a Local Shop"
+          is_correct: true
+        b: 
+          text: "In a Restaurant"
+        c: 
+          text: "In a Hospital"
+        d: 
+          text: "In a Golf Course"
+    four: 
+      text: 'How many siblings does Ciara have?'
+      answers: 
+        a: 
+          text: "None"
+        b: 
+          text: "One"
+          is_correct: true
+        c: 
+          text: "Two"
+        d: 
+          text: "Three"
+    five: 
+      text: "What colour are Ciara's eyes?"
+      answers: 
+        a: 
+          text: "Blue"
+        b: 
+          text: "Green"
+        c: 
+          text: "Amber"
+        d: 
+          text: "Brown"
+          is_correct: true
+
+the-numbers-of-mike-and-ciara:
+  name: "🔢 - The Numbers of Mike and Ciara"
+  format: quiz
+  description: All of the answers to this quiz are numbers. Which ones are the correct ones though?
+  questions:
+    one: 
+      text: 'What year did Mike & Ciara meet?'
+      answers: 
+        a: 
+          text: "2016"
+          is_correct: true
+        b: 
+          text: "2017"
+        c: 
+          text: "2018"
+        d: 
+          text: "2019"
+    two: 
+      text: 'What is the number of the house where Mike & Ciara live?'
+      answers: 
+        a: 
+          text: "3"
+        b: 
+          text: "7"
+          is_correct: true
+        c: 
+          text: "24"
+        d: 
+          text: "36"
+    three: 
+      text: 'How many countries have Mike & Ciara visited together?'
+      answers: 
+        a: 
+          text: "5"
+        b: 
+          text: "6"
+          is_correct: true
+        c: 
+          text: "7"
+        d: 
+          text: "8"
+    four: 
+      text: 'How many years are there between Mike & Ciara in age?'
+      answers: 
+        a: 
+          text: "0"
+        b: 
+          text: "1"
+        c: 
+          text: "2"
+        d: 
+          text: "3"
+          is_correct: true
+    five: 
+      text: 'In total, how many years did Mike & Ciara spend at NUIG?'
+      answers: 
+        a: 
+          text: "10"
+        b: 
+          text: "11"
+        c: 
+          text: "12"
+        d: 
+          text: "13"
+          is_correct: true
+
+where-in-the-world--part-i:
+  name: "🏞️ - Where in the World (Part I)"
+  format: quiz
+  description: We'll show you a photo from Mike & Ciara's travel's together, all you have to do is figure out where it is.
+  questions:
+    one: 
+      text: 'Where in Ireland was this photo taken?'
+      photo: cliffs-of-moher
+      answers: 
+        a: 
+          text: "Clare"
+          is_correct: true
+        b: 
+          text: "Donegal"
+        c: 
+          text: "Kerry"
         d: 
           text: "Cork"
-          is_correct: false
+    two: 
+      text: 'Where in the World was this photo taken?'
+      photo: dubai
+      answers: 
+        a: 
+          text: "Auckland"
+        b: 
+          text: "Dubai"
+          is_correct: true
+        c: 
+          text: "New York"
+        d: 
+          text: "London"
+    three: 
+      text: 'Where in Ireland was this photo taken?'
+      photo: gougane-barra
+      answers: 
+        a: 
+          text: "Galway"
+        b: 
+          text: "Cork"
+          is_correct: true
+        c: 
+          text: "Dublin"
+        d: 
+          text: "Tyrone"
+    four: 
+      text: 'Where in the World was this photo taken?'
+      photo: lisbon
+      answers: 
+        a: 
+          text: "Madrid"
+        b: 
+          text: "Glasgow"
+        c: 
+          text: "Rome"
+        d: 
+          text: "Lisbon"
+          is_correct: true
+    five: 
+      text: 'Where in the World was this photo taken?'
+      photo: santorini-1
+      answers: 
+        a: 
+          text: "New Zealand"
+        b: 
+          text: "Portugal"
+        c: 
+          text: "Spain"
+        d: 
+          text: "Greece"
+          is_correct: true
+    six: 
+      text: 'Where in Ireland was this photo taken?'
+      photo: trim
+      answers: 
+        a: 
+          text: "Ballincollig"
+        b: 
+          text: "Omagh"
+        c: 
+          text: "Mullingar"
+        d: 
+          text: "Trim"
+          is_correct: true
+
+mike-and-ciara--the-early-days:
+  name: "🔢 - Mike & Ciara: The Early Days"
+  available_after_date: 01-04-2023
+  format: quiz
+  description: Learn about the beginnings of Mike & Ciara by answering these simple multiple choice questions
+  questions:
+    one:
+      text: ""
+      answers:
+        a:
+          text: ""
+
+mike-and-ciara--the-engagement:
+  name: "🔢 - Mike & Ciara: The Engagement"
+  available_after_date: 01-04-2023
+  format: quiz
+  description: Mike & Ciara got engaged following an elaborate series of events. How much can you remember about the details of the story?
+  questions:
+    one:
+      text: ""
+      answers:
+        a:
+          text: ""
+
+mike-and-ciara--the-engagement:
+  name: "🔢 - Mike & Ciara: The Engagement"
+  available_after_date: 01-04-2023
+  format: quiz
+  description: Mike & Ciara got engaged following an elaborate series of events. How much can you remember about the details of the story?
+  questions:
+    one:
+      text: ""
+      answers:
+        a:
+          text: ""
+
+where-in-the-world--part-ii:
+  name: "🏞️ - Where in the World (Part II)"
+  available_after_date: 01-04-2023
+  format: quiz
+  description: We'll show you a photo from Mike & Ciara's travel's together, all you have to do is figure out where it is.
+  questions:
+    one:
+      text: ""
+      answers:
+        a:
+          text: ""
+
+the-hard-mike-quiz:
+  name: "🔢 - The Hard Mike Quiz"
+  available_after_date: 01-04-2023
+  format: quiz
+  description: If you get these questions correct, then you really know your stuff! These are the details only an expert would know.
+  questions:
+    one:
+      text: ""
+      answers:
+        a:
+          text: ""
+
+the-hard-ciara-quiz:
+  name: "🔢 - The Hard Ciara Quiz"
+  available_after_date: 01-04-2023
+  format: quiz
+  description: If you get these questions correct, then you really know your stuff! These are the details only an expert would know.
+  questions:
+    one:
+      text: ""
+      answers:
+        a:
+          text: ""

@@ -65,7 +65,9 @@ module Import
 
         answer.update_attribute(:enabled, true)
         answer.update_attribute(:text, answer_data[:text])
-        answer.update_attribute(:is_correct, answer_data[:is_correct])
+
+        is_correct = answer_data.has_key?(:is_correct) ? answer_data[:is_correct] : false
+        answer.update_attribute(:is_correct, is_correct)
       end
     end
   end
