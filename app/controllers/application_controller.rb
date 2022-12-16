@@ -15,6 +15,10 @@ class ApplicationController < ActionController::Base
     @page_title = "Where to Stay"
   end
 
+  def hair_and_make_up
+    @page_title = "Hair & Make Up"
+  end
+
   def rsvp
     @page_title = "RSVP"
   end

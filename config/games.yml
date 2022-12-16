@@ -337,3 +337,70 @@ test-quiz--photos-ii:
         d: 
           text: "Cork"
           is_correct: false
+
+
+basics--mike:
+  name: "🔢 - The Basics (Mike)"
+  format: quiz
+  description: Get started with this easy quiz that covers some of the basics of 
+  questions:
+    one: 
+      text: 'Which county is Mike from?'
+      answers: 
+        a: 
+          text: "Mayo"
+          is_correct: true
+        b: 
+          text: "Galway"
+          is_correct: true
+        c: 
+          text: "Tyrone"
+          is_correct: false
+        d: 
+          text: "Dublin"
+          is_correct: false
+    two: 
+      text: 'Which Premier League team does Mike support?'
+      answers: 
+        a: 
+          text: "Man City"
+          is_correct: false
+        b: 
+          text: "Man Utd"
+          is_correct: false
+        c: 
+          text: "Liverpool"
+          is_correct: true
+        d: 
+          text: "Chelsea"
+          is_correct: false
+    three: 
+      text: 'What does Mike do for a living?'
+      answers: 
+        a: 
+          text: "Software Engineer"
+          is_correct: true
+        b: 
+          text: "Secondary School Teacher"
+          is_correct: false
+        c: 
+          text: "Pilot"
+          is_correct: false
+        d: 
+          text: "Dentist"
+          is_correct: false
+    four: 
+      text: 'Where was this photo taken?'
+      answers: 
+        a: 
+          text: "Kilkenny"
+          is_correct: true
+        b: 
+          text: "Clare"
+          is_correct: false
+        c: 
+          text: "Tipperary"
+          is_correct: false
+        d: 
+          text: "Cork"
+          is_correct: false

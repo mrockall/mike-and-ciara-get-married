@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   get 'details-of-the-day', to: 'application#details_of_the_day'
   get 'where-to-stay', to: 'application#where_to_stay'
+  get 'hair-and-make-up', to: 'application#hair_and_make_up'
   get 'rsvp', to: 'application#rsvp'
 
   get 'games', to: 'games#index'
