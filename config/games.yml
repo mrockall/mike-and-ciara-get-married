@@ -122,13 +122,13 @@ the-easy-ciara-quiz:
       answers: 
         a: 
           text: "Blue"
+          is_correct: true
         b: 
           text: "Green"
         c: 
           text: "Amber"
         d: 
           text: "Brown"
-          is_correct: true
 
 the-numbers-of-mike-and-ciara:
   name: "🔢 - The Numbers of Mike and Ciara"
