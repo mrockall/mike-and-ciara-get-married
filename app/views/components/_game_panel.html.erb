@@ -30,7 +30,10 @@
   <p class="mb-4"><%= game.description %></p>
 
   <% if !enabled_and_available %>
-    <p class="text-rose-900">Available to play on <%= game.available_after_date.strftime('%e %B %Y') %></p>
+    <p class="text-rose-900">
+      <span class="bg-rose-100 font-semibold text-xs mr-2 px-2.5 py-0.5 rounded">Coming soon!</span>
+      Available to play on <%= game.available_after_date.strftime('%e %B %Y') %>
+    </p>
 
   <% else %>
     <p class="uppercase text-xs font-bold tracking-wide mb-4">
