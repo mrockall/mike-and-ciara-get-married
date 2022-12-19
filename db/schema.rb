@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_27_143145) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_19_204523) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -23,6 +23,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_27_143145) do
     t.integer "count_chosen", default: 0
     t.string "key"
     t.boolean "enabled"
+    t.integer "position"
   end
 
   create_table "games", force: :cascade do |t|
@@ -34,6 +35,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_27_143145) do
     t.string "key"
     t.text "description"
     t.date "available_after_date"
+    t.integer "position"
   end
 
   create_table "questions", force: :cascade do |t|
@@ -46,6 +48,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_27_143145) do
     t.string "key"
     t.boolean "enabled"
     t.string "photo"
+    t.integer "position"
   end
 
   create_table "session_game_answers", force: :cascade do |t|

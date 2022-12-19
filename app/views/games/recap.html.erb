@@ -5,7 +5,7 @@
       <%= @game.name %>
     </h2>
     <p class="flex gap-2 items-center uppercase text-xs font-bold tracking-wide text-rose-900 mb-4">
-      <%= @game.questions.count %> Questions
+      <%= @game.questions.in_order.count %> Questions
       <% @game.questions.each do |question| %>
         <% answer = question.get_answer_for_session(@session_id) %>
         <span class="w-4 h-1 rounded
@@ -23,7 +23,7 @@
     </p>
   </div>
 
-  <% @game.questions.each_with_index do |question, index| %>
+  <% @game.questions.in_order.each_with_index do |question, index| %>
   <div class="p-4 mb-8 border border-stone-200 rounded-xl text-stone-500">
     <p class="uppercase text-xs font-bold tracking-wide text-stone-700 mb-2">
       Question <%= index + 1 %> of <%= @game.questions.count %>
@@ -36,7 +36,7 @@
     <div class="bg-rose-100 rounded-lg h-[32rem] bg-cover bg-center" style="background-image: url(<%= photo_url %>)"></div>
     <% end %>
 
-    <% question.enabled_answers.each do |answer| %>
+    <% question.enabled_answers.in_order.each do |answer| %>
       <% submitted_answer = question.get_answer_for_session(@session_id) %>
       <% next unless answer.is_correct || answer.id == submitted_answer.id %>
       <div>

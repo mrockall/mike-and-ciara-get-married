@@ -5,7 +5,7 @@ class GamesController < ActionController::Base
   before_action :get_next_three_games
 
   def index
-    enabled_games = Game.where(enabled: true).order(:id)
+    enabled_games = Game.where(enabled: true).in_order
     redirect_to('/') unless enabled_games.any?
 
     @page_title = "Games"

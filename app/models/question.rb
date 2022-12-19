@@ -1,5 +1,7 @@
 class Question < ApplicationRecord
 
+  scope :in_order, -> { order("position ASC") }
+
   belongs_to :game
 
   has_many :answers, dependent: :destroy

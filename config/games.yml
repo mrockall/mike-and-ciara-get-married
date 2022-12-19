@@ -135,30 +135,6 @@ the-numbers-of-mike-and-ciara:
   format: quiz
   description: All of the answers to this quiz are numbers. Which ones are the correct ones though?
   questions:
-    one: 
-      text: 'What year did Mike & Ciara meet?'
-      answers: 
-        a: 
-          text: "2016"
-          is_correct: true
-        b: 
-          text: "2017"
-        c: 
-          text: "2018"
-        d: 
-          text: "2019"
-    two: 
-      text: 'What is the number of the house where Mike & Ciara live?'
-      answers: 
-        a: 
-          text: "3"
-        b: 
-          text: "7"
-          is_correct: true
-        c: 
-          text: "24"
-        d: 
-          text: "36"
     three: 
       text: 'How many countries have Mike & Ciara visited together?'
       answers: 
@@ -171,6 +147,30 @@ the-numbers-of-mike-and-ciara:
           text: "7"
         d: 
           text: "8"
+    two: 
+      text: 'What is the number of the house where Mike & Ciara live?'
+      answers: 
+        a: 
+          text: "3"
+        b: 
+          text: "7"
+          is_correct: true
+        c: 
+          text: "24"
+        d: 
+          text: "36"
+    one: 
+      text: 'What year did Mike & Ciara meet?'
+      answers: 
+        a: 
+          text: "2016"
+          is_correct: true
+        b: 
+          text: "2017"
+        c: 
+          text: "2018"
+        d: 
+          text: "2019"
     four: 
       text: 'How many years are there between Mike & Ciara in age?'
       answers: 
@@ -196,7 +196,7 @@ the-numbers-of-mike-and-ciara:
           text: "13"
           is_correct: true
 
-where-in-the-world-photos--part-i:
+where-in-the-world--part-i:
   name: "🏞️ - Where in the World (Part I)"
   format: quiz
   description: We'll show you a photo from Mike & Ciara's travel's together, all you have to do is figure out where it is.

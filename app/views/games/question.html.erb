@@ -6,7 +6,7 @@
     </h2>
     <p class="flex gap-2 items-center uppercase text-xs font-bold tracking-wide text-rose-900 mb-4">
       <%= @game.questions.count %> Questions
-      <% @game.questions.each do |question| %>
+      <% @game.questions.in_order.each do |question| %>
         <% answer = question.get_answer_for_session(@session_id) %>
         <span class="w-4 h-1 rounded
           <%=
@@ -25,7 +25,7 @@
 
   <div class="p-4 mb-4 border border-stone-200 rounded-xl text-stone-500">
     <p class="uppercase text-xs font-bold tracking-wide text-stone-700 mb-2">
-      Question <%= @game.questions.index(@question) + 1 %> of <%= @game.questions.count %>
+      Question <%= @game.questions.in_order.index(@question) + 1 %> of <%= @game.questions.count %>
     </p>
 
     <h3 class="mb-2 text-2xl text-stone-700"><%= @question.text %></h3>
@@ -35,7 +35,7 @@
     <div class="bg-rose-100 rounded-lg h-[32rem] bg-cover bg-center" style="background-image: url(<%= photo_url %>)"></div>
     <% end %>
 
-    <% @question.enabled_answers.each do |answer| %>
+    <% @question.enabled_answers.in_order.each do |answer| %>
       <div>
         <a href="/games/<%= @game.key %>/submit-answer/<%= answer.id %>" class="inline-flex items-center py-4 px-4 mt-2 w-full text-md font-medium text-stone-700 bg-white rounded-lg border border-stone-200 hover:bg-rose-100 hover:text-rose-900 hover:border-rose-100 focus:z-10 focus:ring-4 focus:outline-none focus:ring-rose-200 focus:text-rose-900">
           <span class="flex-grow"><%= answer.text %></span>

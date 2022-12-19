@@ -15,14 +15,18 @@ module Import
     end
 
     def execute
-      Game.update_all(enabled: false)
+      Game.update_all(enabled: false, position: nil)
 
-      @config.each do |game_key, game_data|
+      @config.each_with_index do |game, position|
+        game_key = game[0]
+        game_data = game[1]
+
         game = Game.find_or_create_by({
           key: game_key
         })
 
         game.update_attribute(:enabled, true)
+        game.update_attribute(:position, position)
         game.update_attribute(:description, game_data[:description])
         game.update_attribute(:name, game_data[:name])
         game.update_attribute(:format, game_data[:format])
@@ -38,15 +42,19 @@ module Import
     private
 
     def import_questions_for_game(game, questions)
-      game.questions.update_all(enabled: false)
+      game.questions.update_all(enabled: false, position: nil)
 
-      questions.each do |question_key, question_data|
+      questions.each_with_index do |question, position|
+        question_key = question[0]
+        question_data = question[1]
+
         question = Question.find_or_create_by({
           key: question_key,
           game_id: game.id
         })
 
         question.update_attribute(:enabled, true)
+        question.update_attribute(:position, position)
         question.update_attribute(:text, question_data[:text])
         question.update_attribute(:photo, question_data[:photo]) if question_data.has_key? :photo
 
@@ -55,15 +63,19 @@ module Import
     end
 
     def import_answers_for_question(question, answers)
-      question.answers.update_all(enabled: false)
+      question.answers.update_all(enabled: false, position: nil)
 
-      answers.each do |answer_key, answer_data|
+      answers.each_with_index do |answer, position|
+        answer_key = answer[0]
+        answer_data = answer[1]
+
         answer = Answer.find_or_create_by({
           key: answer_key,
           question_id: question.id
         })
 
         answer.update_attribute(:enabled, true)
+        answer.update_attribute(:position, position)
         answer.update_attribute(:text, answer_data[:text])
 
         is_correct = answer_data.has_key?(:is_correct) ? answer_data[:is_correct] : false

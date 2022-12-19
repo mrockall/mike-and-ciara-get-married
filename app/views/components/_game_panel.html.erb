@@ -11,7 +11,7 @@
   
   <p class="flex gap-2 items-center uppercase text-xs font-bold tracking-wide text-rose-900 mb-4">
     <%= game.questions.count %> Questions
-    <% game.questions.each do |question| %>
+    <% game.questions.in_order.each do |question| %>
       <% answer = question.get_answer_for_session(@session_id) %>
       <span class="w-4 h-1 rounded
         <%=
