@@ -9,6 +9,7 @@
     <%= status == :finished ? "✅ - " : "" %><%= game.name %>
   </h3>
   
+  <% if enabled_and_available %>
   <p class="flex gap-2 items-center uppercase text-xs font-bold tracking-wide text-rose-900 mb-4">
     <%= game.questions.count %> Questions
     <% game.questions.in_order.each do |question| %>
@@ -26,6 +27,7 @@
       "></span>
     <% end %>
   </p>
+  <% end %>
   
   <p class="mb-4"><%= game.description %></p>
 
