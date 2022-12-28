@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_28_103125) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_28_110258) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -60,7 +60,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_28_103125) do
   end
 
   create_table "session_games", force: :cascade do |t|
-    t.string "session_id"
+    t.string "old_string_session_id"
     t.integer "game_id"
     t.string "status"
     t.integer "count_correct"
@@ -68,7 +68,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_28_103125) do
     t.integer "count_remaining"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "new_session_id"
+    t.integer "session_id"
   end
 
   create_table "sessions", force: :cascade do |t|
