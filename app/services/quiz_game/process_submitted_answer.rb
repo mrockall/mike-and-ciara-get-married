@@ -7,7 +7,10 @@ module QuizGame
     end
 
     def execute
-      session_game = find_or_create_session_game
+      session = find_or_create_session
+      return unless session.present?
+
+      session_game = find_or_create_session_game(session)
       return unless session_game.present?
 
       existing_answer = SessionGameAnswer.where({
@@ -34,10 +37,16 @@ module QuizGame
 
     private
 
-    def find_or_create_session_game
+    def find_or_create_session
+      Session.find_or_create_by({
+        session_id: @session_id
+      })
+    end
+
+    def find_or_create_session_game(session)
       SessionGame.find_or_create_by({
         game: @game,
-        session_id: @session_id
+        session_id: session.id
       })
     end
   end

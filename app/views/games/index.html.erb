@@ -9,6 +9,16 @@
   <% if Rails.env.development? %>
     <div class="p-4 mt-24 bg-yellow-50 border border-yellow-200 rounded-xl text-stone-500">
       <p class="mb-4">For development purposes only.</p>
+      <ul class="mb-4">
+        <li>Session ID: <%= @session_id %></li>
+        <% session = Session.find_by_session_id(@session_id.to_s) %>
+        <% if session.present? %>
+          <li>Name: <%= session.name %></li>
+          <li>Games Played: <%= session.games_played %></li>
+          <li>Count Correct: <%= session.count_correct %></li>
+          <li>Count Incorrect: <%= session.count_incorrect %></li>
+        <% end %>
+      </ul>
       <%= render "components/button", url: "/games/start-over", text: "Clear Game Progress" %>
     </div>
   <% end %>

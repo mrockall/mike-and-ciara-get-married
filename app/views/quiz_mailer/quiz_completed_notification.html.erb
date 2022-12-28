@@ -1,7 +1,12 @@
 <h1><%= @game.name %></h1>
 
 <ul>
-  <li><b>Session ID:</b> <%= @session_game.session_id %></li>
+  <li><b>Site:</b> <%= @session_game.session.session_id %></li>
+  <li><b>Session ID:</b> <%= @session_game.session.session_id %></li>
+  <li><b>Session Name:</b> <%= @session_game.session.name %></li>
+  <li><b>Session Games Played:</b> <%= @session_game.session.games_played %></li>
+  <li><b>Session # Correct:</b> <%= @session_game.session.count_correct %></li>
+  <li><b>Session # Incorrect:</b> <%= @session_game.session.count_incorrect %></li>
 </ul>
 
 <% @game.questions.each_with_index do |question, index| %>
@@ -10,7 +15,7 @@
 
   <ul>
   <% question.enabled_answers.each do |answer| %>
-    <% submitted_answer = question.get_answer_for_session(@session_game.session_id) %>
+    <% submitted_answer = question.get_answer_for_session(@session_game.session.session_id) %>
     <li>
       <%= 
         if answer.id == submitted_answer.id 

@@ -22,9 +22,9 @@ class Question < ApplicationRecord
   end
 
   def get_answer_for_session(session_id)
-    query = SessionGameAnswer.joins(:session_game)
+    query = SessionGameAnswer.joins(session_game: [:session])
     query = query.where(question_id: self.id)
-    query = query.where(session_games: {session_id: session_id.to_s})
+    query = query.where(session_games: {sessions: {session_id: session_id.to_s}})
     submitted_answer = query.first
     return nil unless submitted_answer.present?
     

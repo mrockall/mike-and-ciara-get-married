@@ -6,9 +6,9 @@ module QuizGame
     end
 
     def execute
-      session_game = SessionGame.where({
+      session_game = SessionGame.joins(:session).where({
         game: @game,
-        session_id: @session_id
+        sessions: {session_id: @session_id}
       }).first
 
       return :not_started if session_game.nil?
