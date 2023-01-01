@@ -11,7 +11,10 @@ Rails.application.routes.draw do
   get 'rsvp', to: 'application#rsvp'
 
   get 'games', to: 'games#index'
+  get 'games/leaderboard', to: 'games#leaderboard'
   get 'games/start-over', to: 'games#start_over'
+  get 'games/add-name', to: 'games#add_name'
+  post 'games/add-name', to: 'games#handle_add_name'
   get 'games/:key', to: 'games#game'
   get 'games/:key/submit-answer/:answer_id', to: 'games#submit_answer'
 

@@ -1,5 +1,10 @@
 <section class="py-12 px-6 mx-auto max-w-5xl">
   <%= render "svg/games" %>
+  <div class="mb-4">
+    
+    <%= render "components/button", url: "/games/add-name", text: @my_sesh.name.present? ? "🤵 Edit your Name (#{@my_sesh.name})" : "🤵 Add your Name" %>
+    <%= render "components/button", url: "/games/leaderboard", text: "🥇 Leaderboard" %>
+  </div>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
   <% @games.each do |game| %>
     <%= render "components/game_panel", game: game %>

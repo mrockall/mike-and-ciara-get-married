@@ -1,0 +1,30 @@
+<section class="py-12 px-6 mx-auto max-w-5xl">
+  <%= render "svg/games" %>
+
+  <div class="p-4 mb-4 text-stone-500 grid grid-cols-10 gap-4">
+    <span></span>
+    <span class="col-span-6 font-bold">Name</span>
+    <span>✅</span>
+    <span>❌</span>
+    <span>%</span>
+  </div>
+  <ul>
+  <% @sessions.each_with_index do |session, index| %>
+    <li class="p-4 mb-4 border border-stone-200 rounded-xl text-stone-500 grid grid-cols-10 gap-4
+      <%= (session.session_id == @session_id.to_s) ? "bg-rose-100 border-rose-200" : ""  %>">
+      <span class="font-bold text-rose-900"><%= session.id == @my_sesh.id ? @my_sesh.leaderboad_position : index + 1 %></span>
+      <span class="col-span-6 <%= session.name ? "" : "text-stone-400 italic" %>">
+        <%= session.name || "Anonymous" %>
+        <% if(session.session_id == @session_id.to_s) %>
+        <span class="bg-rose-900 text-white font-semibold text-xs ml-2 px-1.5 py-0.5 rounded">You!</span>
+        <% end %>
+      </span>
+      <span class="font-bold"><%= session.count_correct %></span>
+      <span><%= session.count_incorrect %></span>
+      <span><%= session.count_incorrect %></span>
+    </li>
+  <% end %>
+  </ul>
+</section>
+
+<%= render "components/page_of_photos" %>

@@ -1,7 +1,7 @@
 class GamesController < ActionController::Base
   layout 'application'
   before_action :check_if_games_are_enabled
-  before_action :pass_the_session_id_to_the_view
+  before_action :pass_the_session_to_the_view
   before_action :get_next_three_games
 
   def index
@@ -18,6 +18,11 @@ class GamesController < ActionController::Base
     @game = Game.where(key: params[:key]).first
     return redirect_to("/games") unless @game.present?
     return redirect_to("/games") unless @game.is_enabled_and_available?
+
+    unless @my_sesh.name.present?
+      session[:redirected_from_game] = @game.id
+      return redirect_to("/games/add-name") 
+    end
 
     @page_title = "#{@game.name} | Games"
 
@@ -44,6 +49,35 @@ class GamesController < ActionController::Base
     QuizGame::ProcessSubmittedAnswer.new(@game, @session_id, @answer).execute
   end
 
+  def leaderboard
+    query = Session.leaderboard_order
+    query = query.limit(20)
+    @sessions = query.to_a
+
+    unless @sessions.map(&:session_id).include?(@my_sesh.session_id)
+      @sessions.push(@my_sesh)
+    end
+  end
+
+  def add_name
+    @page_title = "Add your Name | Games"
+    @redirected_from_game = session[:redirected_from_game]
+    @current_name = @my_sesh.name
+    session[:redirected_from_game] = nil
+  end
+
+  def handle_add_name
+    @my_sesh.name = params[:name]
+    @my_sesh.save
+
+    if params[:redirect_to_game]
+      game_url = Game.where(id: params[:redirect_to_game]).first.url
+      redirect_to(game_url)
+    else
+      redirect_to("/games")
+    end
+  end
+
   def start_over
     reset_session
     redirect_back_or_to "/games"
@@ -57,8 +91,9 @@ class GamesController < ActionController::Base
     @games_are_enabled = Game.where(enabled: true).any?
   end
 
-  def pass_the_session_id_to_the_view
+  def pass_the_session_to_the_view
     @session_id = session.id
+    @my_sesh = Session.find_or_create_by(session_id: @session_id.to_s)
   end
 
   def get_next_three_games
