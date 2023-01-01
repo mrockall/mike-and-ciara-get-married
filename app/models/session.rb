@@ -25,4 +25,11 @@ class Session < ApplicationRecord
 
     above_count + tied_count + 1
   end
+
+  # public
+  def percentage_correct
+    return 0.0 if count_correct + count_incorrect == 0
+
+    ((count_correct / (count_correct + count_incorrect).to_f) * 100).round
+  end
 end
