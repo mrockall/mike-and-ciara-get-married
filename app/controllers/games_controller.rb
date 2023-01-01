@@ -51,6 +51,7 @@ class GamesController < ActionController::Base
 
   def leaderboard
     query = Session.leaderboard_order
+    query = query.where('count_correct > 0')
     query = query.limit(20)
     @sessions = query.to_a
 
