@@ -71,9 +71,10 @@ class GamesController < ActionController::Base
     @my_sesh.name = params[:name]
     @my_sesh.save
 
-    if params[:redirect_to_game]
-      game_url = Game.where(id: params[:redirect_to_game]).first.url
-      redirect_to(game_url)
+    game = Game.where(id: params[:redirect_to_game]).first
+
+    if game.present?
+      redirect_to(game.url)
     else
       redirect_to("/games")
     end
