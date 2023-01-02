@@ -1,64 +1,98 @@
 <%
   options = [{
-    name: 'Farnham Estate',
-    type: "hair",
-    image: 'farnham',
+    name: 'SB Hair',
+    type: "fivemiletown",
+    image: 'sbhair',
+    hair?: true,
+    make_up?: true,
     actions: [{
       text: '📍 Location',
-      url: "https://www.google.ie/maps/place/Drumbar,+Farnham+Estate,+Co.+Cavan/@54.0025242,-7.435828,14z/data=!3m1!4b1!4m5!3m4!1s0x485e0da44652a9bf:0x2396ace3600ae133!8m2!3d54.00253!4d-7.39995"
+      url: "https://www.google.com/maps/place/sb+hair/data=!4m2!3m1!1s0x0:0xb887e73d680af3ed"
     }, {
-      text: '🔗 Website',
-      url: "https://www.farnhamestate.ie/"
+      text: '🔗 Facebook',
+      url: "https://www.facebook.com/SBHairFivemiletown/"
     }]
   }, {
-    name: 'Farnham Estate',
-    type: "hair",
-    image: 'farnham',
+    name: 'L.A Hair',
+    type: "fivemiletown",
+    image: 'lahair',
+    hair?: true,
+    make_up?: false,
     actions: [{
       text: '📍 Location',
-      url: "https://www.google.ie/maps/place/Drumbar,+Farnham+Estate,+Co.+Cavan/@54.0025242,-7.435828,14z/data=!3m1!4b1!4m5!3m4!1s0x485e0da44652a9bf:0x2396ace3600ae133!8m2!3d54.00253!4d-7.39995"
+      url: "https://www.google.com/maps/place/La+Hair/@54.3779447,-7.3159147,15z/data=!4m5!3m4!1s0x0:0x69837cc269a0ea8b!8m2!3d54.3779498!4d-7.3159191"
     }, {
-      text: '🔗 Website',
-      url: "https://www.farnhamestate.ie/"
+      text: '📞 Phone',
+      url: "tel:+442889522228"
     }]
   }, {
-    name: 'Farnham Estate',
-    type: "make_up",
-    image: 'farnham',
+    name: 'Edel Greene',
+    type: "fivemiletown",
+    image: 'edel_greene',
+    hair?: false,
+    make_up?: true,
     actions: [{
       text: '📍 Location',
-      url: "https://www.google.ie/maps/place/Drumbar,+Farnham+Estate,+Co.+Cavan/@54.0025242,-7.435828,14z/data=!3m1!4b1!4m5!3m4!1s0x485e0da44652a9bf:0x2396ace3600ae133!8m2!3d54.00253!4d-7.39995"
+      url: "https://www.google.com/maps/place/Edel+Greene+Beauty/@54.3163863,-7.4039554,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x275801d7e50dbe1f!8m2!3d54.3163863!4d-7.4039554"
     }, {
       text: '🔗 Website',
-      url: "https://www.farnhamestate.ie/"
+      url: "https://edelgreenebeauty.co.uk/"
     }]
   }, {
-    name: 'Farnham Estate',
-    type: "make_up",
-    image: 'farnham',
+    name: "Lesley's Beautique",
+    type: "fivemiletown",
+    image: 'lesleys',
+    hair?: false,
+    make_up?: true,
     actions: [{
       text: '📍 Location',
-      url: "https://www.google.ie/maps/place/Drumbar,+Farnham+Estate,+Co.+Cavan/@54.0025242,-7.435828,14z/data=!3m1!4b1!4m5!3m4!1s0x485e0da44652a9bf:0x2396ace3600ae133!8m2!3d54.00253!4d-7.39995"
+      url: "https://www.google.com/maps/place/Lesley's+Beautique/@54.378672,-7.3179299,17z/data=!3m1!4b1!4m5!3m4!1s0x485e255b17cf2c93:0x77d02b0203787812!8m2!3d54.378672!4d-7.315355"
     }, {
       text: '🔗 Website',
-      url: "https://www.farnhamestate.ie/"
+      url: "https://www.facebook.com/people/Lesleys-Beautique-Page/100057074574402/"
+    }]
+  }, {
+    name: "Vibe Hair Studio",
+    type: "farnham",
+    image: 'vibe',
+    hair?: true,
+    make_up?: false,
+    actions: [{
+      text: '📍 Location',
+      url: "https://www.google.com/maps/place/Vibe+Hair+Studio/@52.8897013,-8.796483,8z/data=!4m9!1m2!2m1!1sVibe+Hair+studio!3m5!1s0x485e0da661518cad:0x7a4f6c5d4f447d6d!8m2!3d53.9752246!4d-7.3541243!15sChBWaWJlIEhhaXIgc3R1ZGlvkgEKaGFpcl9zYWxvbuABAA?hl=en"
+    }, {
+      text: '🔗 Website',
+      url: "https://www.facebook.com/hairbykarenconroy"
+    }]
+  }, {
+    name: "Deja Vu Hair Salon",
+    type: "farnham",
+    image: 'dejavu',
+    hair?: true,
+    make_up?: false,
+    actions: [{
+      text: '📍 Location',
+      url: "https://www.google.com/maps/place/Deja+Vu/@53.9940983,-7.3691437,16z/data=!4m5!3m4!1s0x485e0c329be30377:0x9f7889264b2157bd!8m2!3d53.9940983!4d-7.3596165"
+    }, {
+      text: '🔗 Website',
+      url: "https://www.facebook.com/people/Deja-Vu-Hair-Salon/100063709351955/"
     }]
   }]
 %>
 <header class="py-12 px-6 mx-auto max-w-4xl">
   <%= render "svg/hair_and_make_up" %>
-  <p class="pb-4 text-base leading-7">Guests are free to stay wherever they'd like on the night of the wedding. There are rooms and lodges available on site at Farnham Estate - contact the hotel directly and mention the McKenna/Rockall wedding to avail of the wedding rate. There are additional options for Airbnbs, B&Bs, and hotels in Cavan town which are approximately a 15 minute taxi away. Please see the list below for some of the options.</p>
+  <p class="pb-4 text-base leading-7">For guests that are staying away from home on the night before the wedding, here are some hair and make up options near Farnham and Fivemiletown.</p>
 
-  <h2 class="py-4 text-2xl text-stone-700">Hair</h2>
+  <h2 class="py-4 text-2xl text-stone-700">Near Fivemiletown</h2>
   <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-    <% options.select {|l| l[:type] == "hair" }.each do |option| %>
+    <% options.select {|l| l[:type] == "fivemiletown" }.each do |option| %>
       <%= render "hair_and_make_up_option", option: option %>
     <% end %>
   </div>
 
-  <h2 class="pt-8 pb-4 text-2xl text-stone-700">Make Up</h2>
+  <h2 class="pt-8 pb-4 text-2xl text-stone-700">Near Farnham</h2>
   <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-    <% options.select {|l| l[:type] == "make_up" }.each do |option| %>
+    <% options.select {|l| l[:type] == "farnham" }.each do |option| %>
       <%= render "hair_and_make_up_option", option: option %>
     <% end %>
   </div>

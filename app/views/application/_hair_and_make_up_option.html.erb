@@ -6,6 +6,16 @@
 
   <h3 class="text-lg font-semibold text-stone-700"><%= option[:name] %></h3>
 
+  <h4 class="text-base font-semibold pt-4 pb-2">Services:</h4>
+  <ul class="list-disc pl-6">
+    <% if option[:hair?] %>
+    <li>Hair</li>
+    <% end %>
+    <% if option[:make_up?] %>
+    <li>Make Up</li>
+    <% end %>
+  </ul>
+
   <% if option[:actions].present? %> 
     <div class="pt-4">
       <% option[:actions].each do |action| %>
