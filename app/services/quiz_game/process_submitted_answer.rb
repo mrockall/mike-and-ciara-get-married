@@ -26,13 +26,17 @@ module QuizGame
       })
 
       if @answer.is_correct
-        session_game.increment :count_correct
+        session_game.increment! :count_correct
+        @answer.question.increment! :count_correct
       else
-        session_game.increment :count_incorrect
+        session_game.increment! :count_incorrect
+        @answer.question.increment! :count_incorrect
       end
 
       remaining_count = @game.enabled_questions.count - session_game.count_correct - session_game.count_incorrect
       session_game.update_attribute :count_remaining, remaining_count
+
+      @answer.increment! :count_chosen
     end
 
     private

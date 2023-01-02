@@ -30,4 +30,9 @@ class Question < ApplicationRecord
     
     submitted_answer.answer
   end
+
+  def get_percentage_chosen_for_answer(answer)
+    return 0 unless has_been_answered
+    ((answer.count_chosen / (count_correct + count_incorrect).to_f) * 100).round
+  end
 end

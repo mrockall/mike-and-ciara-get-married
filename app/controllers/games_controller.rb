@@ -43,10 +43,10 @@ class GamesController < ActionController::Base
     @answer = Answer.where(id: params[:answer_id]).first
     return redirect_to("/games/#{@game.key}") unless @answer.present?
 
-    @page_title = "#{@game.name} | Games"
-    @question = @answer.question
-
     QuizGame::ProcessSubmittedAnswer.new(@game, @session_id, @answer).execute
+
+    @page_title = "#{@game.name} | Games"
+    @question = @answer.question.reload
   end
 
   def leaderboard
