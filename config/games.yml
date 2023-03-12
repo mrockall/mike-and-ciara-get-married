@@ -282,72 +282,329 @@ where-in-the-world--part-i:
 
 mike-and-ciara--the-early-days:
   name: "🔢 - Mike & Ciara: The Early Days"
-  available_after_date: 01-04-2023
+  available_after_date: 12-03-2023
   format: quiz
   description: Learn about the beginnings of Mike & Ciara by answering these simple multiple choice questions
   questions:
     one:
-      text: ""
+      text: "What was the name of the Galway bar where Mike and Ciara first met?"
       answers:
         a:
-          text: ""
+          text: "The Dail"
+          is_correct: true
+        b:
+          text: "The Front Door"
+        c:
+          text: "Seven"
+        d:
+          text: "Buskers"
+    two:
+      text: "Which friend claims to have introduced Ciara and Mike? "
+      answers:
+        a:
+          text: "Lizanne"
+        b:
+          text: "Daire"
+        c:
+          text: "Eimear"
+        d:
+          text: "Spoon"
+          is_correct: true
+    three:
+      text: "Where did Ciara promise to take Mike the first time they met?"
+      answers:
+        a:
+          text: "Fivemiletown"
+        b:
+          text: "The Cliffs of Moher"
+          is_correct: true
+        c:
+          text: "Cuilcagh Boardwalk"
+        d:
+          text: "Diamond Hill"
+    four:
+      text: "Where did Mike & Ciara go on their first date?"
+      answers:
+        a:
+          text: "For dinner & drinks"
+          is_correct: true
+        b:
+          text: "To the cinema"
+        c:
+          text: "Bowling"
+        d:
+          text: "To the Cliffs of Moher"
+    five:
+      text: "Where did Ciara first meet Mike's parents?"
+      answers:
+        a:
+          text: "At a basketball game"
+        b:
+          text: "At home in Oranmore"
+        c:
+          text: "On a Rockall weekend away in Cork"
+          is_correct: true
+        d:
+          text: "A random encounter in Galway"
 
 mike-and-ciara--the-engagement:
   name: "🔢 - Mike & Ciara: The Engagement"
-  available_after_date: 01-04-2023
+  available_after_date: 12-03-2023
   format: quiz
   description: Mike & Ciara got engaged following an elaborate series of events. How much can you remember about the details of the story?
   questions:
     one:
-      text: ""
+      text: "Where did Mike propose to Ciara?"
       answers:
         a:
-          text: ""
-
-mike-and-ciara--the-engagement:
-  name: "🔢 - Mike & Ciara: The Engagement"
-  available_after_date: 01-04-2023
-  format: quiz
-  description: Mike & Ciara got engaged following an elaborate series of events. How much can you remember about the details of the story?
-  questions:
-    one:
-      text: ""
+          text: "At sunset on a beach"
+        b:
+          text: "Whilst out for dinner at a fancy restaurant"
+        c:
+          text: "At home in their living room"
+          is_correct: true
+        d:
+          text: "Whilst on a weekend break in Ireland"
+    two:
+      text: "Mike proposed at home, surrounded by photos, flowers and fairy lights. Who transformed the apartment whilst Mike distracted Ciara?"
       answers:
         a:
-          text: ""
+          text: "Claire & Leeanne"
+          is_correct: true
+        b:
+          text: "Liam & Lisa"
+        c:
+          text: "Eoin & Steve"
+        d:
+          text: "Mary & Alan"
+    three:
+      text: "Eoin was supposed to be there to help Claire and Leeanne but couldn't make it. Why was that?"
+      answers:
+        a:
+          text: "He got covid"
+          is_correct: true
+        b:
+          text: "He had a basketball match"
+        c:
+          text: "He had a date"
+        d:
+          text: "He forgot"
+    four:
+      text: "How did Mike distract Ciara, so Claire & Leeanne could setup the house?"
+      answers:
+        a:
+          text: "Took her on a walk in Salthill"
+        b:
+          text: "Took her to see a movie"
+        c:
+          text: "Brought her to Oranmore to see Mary & Alan"
+        d:
+          text: "Took her to dinner with Liam & Lisa"
+          is_correct: true
+    five:
+      text: "How long did it take Ciara to say yes?"
+      answers:
+        a:
+          text: "No time at all, she said yes instantly"
+          is_correct: true
+        b:
+          text: "She thought about it for a minute or two"
+        c:
+          text: "She asked for the weekend to think about it"
+        d:
+          text: "She said yes the following month"
 
 where-in-the-world--part-ii:
   name: "🏞️ - Where in the World (Part II)"
-  available_after_date: 01-04-2023
+  available_after_date: 12-03-2023
   format: quiz
   description: We'll show you a photo from Mike & Ciara's travel's together, all you have to do is figure out where it is.
   questions:
-    one:
-      text: ""
-      answers:
-        a:
-          text: ""
+    one: 
+      text: 'Where in Europe was this photo taken?'
+      photo: budapest
+      answers: 
+        a: 
+          text: "Budapest"
+          is_correct: true
+        b: 
+          text: "Venice"
+        c: 
+          text: "Rome"
+        d: 
+          text: "Prague"
+    two: 
+      text: 'Where in the World was this photo taken?'
+      photo: new-zealand
+      answers: 
+        a: 
+          text: "Lisbon - Portugal"
+        b: 
+          text: "Queenstown - New Zealand"
+          is_correct: true
+        c: 
+          text: "Tralee - Kerry"
+        d: 
+          text: "Sorrento - Italy"
+    three: 
+      text: 'Where in Ireland was this photo taken?'
+      photo: ashford-castle
+      answers: 
+        a: 
+          text: "Kylemore Abbey"
+        b: 
+          text: "Ashford Castle"
+          is_correct: true
+        c: 
+          text: "Trim"
+        d: 
+          text: "Blarney Castle"
+    four: 
+      text: 'Where in the Ireland was this photo taken?'
+      photo: croke-park
+      answers: 
+        a: 
+          text: "Tuam Stadium"
+        b: 
+          text: "Pearse Stadium"
+        c: 
+          text: "Aviva"
+        d: 
+          text: "Croke Park"
+          is_correct: true
+    five: 
+      text: 'Where in the World was this photo taken?'
+      photo: torc-waterfall
+      answers: 
+        a: 
+          text: "Greece"
+        b: 
+          text: "Scotland"
+        c: 
+          text: "New Zealand"
+        d: 
+          text: "Kerry"
+          is_correct: true
+    six: 
+      text: 'Where in Ireland was this photo taken?'
+      photo: the-couch
+      answers: 
+        a: 
+          text: "Lucan"
+        b: 
+          text: "Fivemiletown"
+        c: 
+          text: "Oranmore"
+        d: 
+          text: "The Couch"
+          is_correct: true
 
 the-hard-mike-quiz:
   name: "🔢 - The Hard Mike Quiz"
-  available_after_date: 01-04-2023
+  available_after_date: 12-03-2023
   format: quiz
   description: If you get these questions correct, then you really know your stuff! These are the details only an expert would know.
   questions:
     one:
-      text: ""
+      text: "What is Mike's middle name?"
       answers:
         a:
-          text: ""
+          text: "John"
+        b:
+          text: "Walter"
+          is_correct: true
+        c:
+          text: "Matthew"
+        d:
+          text: "Roger"
+    two:
+      text: "Mike & his friends have had multiple pairs of goldfish over the years. Which of these is NOT the names of one of those pairs?"
+      answers:
+        a:
+          text: "Timeless & Classic"
+        b:
+          text: "Ted & Bellick"
+        c:  
+          text: "Hendricks & Gordon"
+        d:
+          text: "Salah & Mane"
+          is_correct: true
+    three:
+      text: "Mike & his friends run a stableford matchplay golf competition called the Blue Pirate. How many times has it been run?"
+      answers:
+        a:
+          text: "9"
+        b:
+          text: "13"
+        c:
+          text: "17"
+          is_correct: true
+        d:
+          text: "21"
+    four:
+      text: "How much older or younger is Mike to his twin sister Claire?"
+      answers:
+        a:
+          text: "15 minutes older"
+        b:
+          text: "8 minutes older"
+          is_correct: true
+        c:
+          text: "4 minutes younger"
+        d:
+          text: "15 minutes younger"
 
 the-hard-ciara-quiz:
   name: "🔢 - The Hard Ciara Quiz"
-  available_after_date: 01-04-2023
+  available_after_date: 12-03-2023
   format: quiz
   description: If you get these questions correct, then you really know your stuff! These are the details only an expert would know.
   questions:
     one:
-      text: ""
+      text: "What musical instrument does Ciara play?"
       answers:
         a:
-          text: ""
+          text: "Flute"
+        b:
+          text: "Accordion"
+          is_correct: true
+        c:
+          text: "Banjo"
+        d:
+          text: "Guitar"
+    two:
+      text: "What is the title of Ciara's PhD thesis?"
+      answers:
+        a:
+          text: "Design of fibre-reinforced polymer composite blades for wind and tidal turbines"
+        b:
+          text: "Carbon fibre reinforced PEEK laminated as a material for orthopaedic devices: An experimental and computational investigation"
+        c:  
+          text: "Experimental and computational investigation of atherosclerotic plaque biomechanics"
+        d:
+          text: "An experimental and computational investigation on the biomechanics of polymer-covered self-expanding stents"
+          is_correct: true
+    three:
+      text: "What is Ciara's middle name?"
+      answers:
+        a:
+          text: "Mary"
+        b:
+          text: "Claire"
+        c:
+          text: "Geraldine"
+          is_correct: true
+        d:
+          text: "Mairead"
+    four:
+      text: "Which of these is NOT a society that Ciara has actively involved in during college?"
+      answers:
+        a:
+          text: "Entrepreneurship"
+        b:
+          text: "Surfing"
+          is_correct: true
+        c:
+          text: "Swimming"
+        d:
+          text: "Engineering"
