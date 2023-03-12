@@ -282,7 +282,7 @@ where-in-the-world--part-i:
 
 mike-and-ciara--the-early-days:
   name: "🔢 - Mike & Ciara: The Early Days"
-  available_after_date: 12-03-2023
+  available_after_date: 01-04-2023
   format: quiz
   description: Learn about the beginnings of Mike & Ciara by answering these simple multiple choice questions
   questions:
@@ -349,7 +349,7 @@ mike-and-ciara--the-early-days:
 
 mike-and-ciara--the-engagement:
   name: "🔢 - Mike & Ciara: The Engagement"
-  available_after_date: 12-03-2023
+  available_after_date: 01-04-2023
   format: quiz
   description: Mike & Ciara got engaged following an elaborate series of events. How much can you remember about the details of the story?
   questions:
@@ -416,7 +416,7 @@ mike-and-ciara--the-engagement:
 
 where-in-the-world--part-ii:
   name: "🏞️ - Where in the World (Part II)"
-  available_after_date: 12-03-2023
+  available_after_date: 01-04-2023
   format: quiz
   description: We'll show you a photo from Mike & Ciara's travel's together, all you have to do is figure out where it is.
   questions:
@@ -501,7 +501,7 @@ where-in-the-world--part-ii:
 
 the-hard-mike-quiz:
   name: "🔢 - The Hard Mike Quiz"
-  available_after_date: 12-03-2023
+  available_after_date: 01-04-2023
   format: quiz
   description: If you get these questions correct, then you really know your stuff! These are the details only an expert would know.
   questions:
@@ -556,7 +556,7 @@ the-hard-mike-quiz:
 
 the-hard-ciara-quiz:
   name: "🔢 - The Hard Ciara Quiz"
-  available_after_date: 12-03-2023
+  available_after_date: 01-04-2023
   format: quiz
   description: If you get these questions correct, then you really know your stuff! These are the details only an expert would know.
   questions:
