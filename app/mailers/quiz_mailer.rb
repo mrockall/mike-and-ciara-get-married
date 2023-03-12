@@ -4,7 +4,7 @@ class QuizMailer < ApplicationMailer
     @game = @session_game.game
 
     to = Rails.application.credentials.gmail.to.email
-    subject = "Someone completed the #{@game.name} quiz"
+    subject = "#{@session_game.session.name} completed the #{@game.name} quiz"
     mail to: to, subject: subject
   end
 end
