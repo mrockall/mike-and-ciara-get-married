@@ -381,7 +381,7 @@ mike-and-ciara--the-engagement:
       text: "Eoin was supposed to be there to help Claire and Leeanne but couldn't make it. Why was that?"
       answers:
         a:
-          text: "He got covid"
+          text: "He had covid"
           is_correct: true
         b:
           text: "He had a basketball match"
@@ -518,7 +518,7 @@ the-hard-mike-quiz:
         d:
           text: "Roger"
     two:
-      text: "Mike & his friends have had multiple pairs of goldfish over the years. Which of these is NOT the names of one of those pairs?"
+      text: "Mike & his housemates have had multiple pairs of goldfish over the years. Which of these is NOT the names of one of those pairs?"
       answers:
         a:
           text: "Timeless & Classic"
@@ -530,7 +530,7 @@ the-hard-mike-quiz:
           text: "Salah & Mane"
           is_correct: true
     three:
-      text: "Mike & his friends run a stableford matchplay golf competition called the Blue Pirate. How many times has it been run?"
+      text: "Mike & his friends run a stableford golf competition called the Blue Pirate. How many times has it been run?"
       answers:
         a:
           text: "9"
