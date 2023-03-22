@@ -1,0 +1,47 @@
+<main class="py-12 px-6 mx-auto max-w-4xl">
+  <%= render "svg/change_of_chapel" %>
+  <p class="pb-4 text-base leading-7">There has been a last minute change of plan - we are now getting married in St Joseph's Chapel, Cooneen. The chapel in Fivemiletown is under refurbishment. We were hoping it would be ready but unfortunately that won't be the case.</p>
+
+  <p class="pb-4 text-base leading-7">The chapel in Cooneen is an excellent second option, as it's very sentimental for Ciara and the McKennas. Cooneen is where Ciara's mum Carmel is from. It's also where Carmel and Benny got married. And Ciara often went there when she was younger. We're very happy to get married there.</p>
+
+  <p class="pb-4 text-base leading-7">We're sorry for any travel inconvenience this might cause, we'll do our best to treat you on the day when you make it North. Looking forward to seeing you all and celebrating with you next week 🥂 💞</p>
+
+  <h2 class="py-4 text-2xl text-stone-700">Parking</h2>
+
+  <p class="pb-4 text-base leading-7">There's a small car park around the side and you can also park on the road next to the wall.</p>
+</main>
+
+<section class="p-6">
+  <ul class="grid md:grid-cols-3 grid-cols-1 gap-4">
+    <li class="px-4">
+      <header class="flex items-center">
+        <h2 class="flex-grow py-4 text-2xl text-stone-700">From Galway/Farnham</h2>
+        <%= render "components/button", url: "https://maps.google.com/maps?ll=53.801465,-8.17295&z=8&t=h&hl=en&gl=IE&mapclient=embed&saddr=Galway&daddr=Maguiresbridge%2C%20Enniskillen%20BT94%204RY%2C%20UK+to:St%20Josephs%27%20Church%20Cooneen%2C%20Fivemiletown%20BT75%200AJ%2C%20United%20Kingdom&dirflg=d", text: "Open in Maps" %>
+      </header>
+      <iframe class="w-full aspect-[1/1]" src="https://www.google.com/maps/embed?pb=!1m34!1m12!1m3!1d917425.224368523!2d-8.73331157795829!3d53.80015851964106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m19!3e0!4m5!1s0x485b93955a2d5bff%3A0x32b1b440a495281!2sGalway!3m2!1d53.274001!2d-9.051266199999999!4m5!1s0x485e3934480dd72b%3A0xa0f3fb539ae2420!2sMaguiresbridge%2C%20Enniskillen%2C%20UK!3m2!1d54.29513!2d-7.46509!4m5!1s0x485e24c17be453e5%3A0x96ed52416fa38597!2sSt%20Josephs&#39;%20Church%20Cooneen%2C%20Fivemiletown%20BT75%200AJ%2C%20United%20Kingdom!3m2!1d54.328283!2d-7.295727599999999!5e1!3m2!1sen!2sie!4v1679493839413!5m2!1sen!2sie" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      
+      <p class="pt-4 text-base leading-7">Going via Maguiresbridge adds 10 minutes to the journey but it's a much better road, then the quickest route that Google Maps will suggest.</p>
+    </li>
+    <li class="px-4">
+      <header class="flex items-center">
+        <h2 class="flex-grow py-4 text-2xl text-stone-700">From Fivemiletown</h2>
+        <%= render "components/button", url: "https://maps.google.com/maps?ll=54.352895,-7.306944&z=12&t=h&hl=en&gl=IE&mapclient=embed&saddr=Fivemiletown%2C%20UK&daddr=St%20Josephs%27%20Church%20Cooneen%2C%20Fivemiletown%20BT75%200AJ%2C%20United%20Kingdom&dirflg=d", text: "Open in Maps" %>
+      </header>
+      <iframe class="w-full aspect-[1/1]" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d59293.404184421386!2d-7.3419630655319725!3d54.35288943172058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x485e235a6e25619b%3A0x574dd2bc55d7d718!2sFivemiletown%2C%20UK!3m2!1d54.3775293!2d-7.317595099999999!4m5!1s0x485e24c17be453e5%3A0x96ed52416fa38597!2sSt%20Josephs&#39;%20Church%20Cooneen%2C%20Fivemiletown%20BT75%200AJ%2C%20United%20Kingdom!3m2!1d54.328283!2d-7.295727599999999!5e1!3m2!1sen!2sie!4v1679489495957!5m2!1sen!2sie" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+      <p class="pt-4 text-base leading-7">Beware that there is some resurfacing taking place in Fivemiletown on the day of the wedding, and there will be diversions in place. Please leave extra time to account for this.</p>
+    </li>
+    <li class="px-4">
+      <header class="flex items-center">
+        <h2 class="flex-grow py-4 text-2xl text-stone-700">From Dublin</h2>
+        <%= render "components/button", url: "https://maps.google.com/maps?ll=54.186281,-7.081263&z=10&t=h&hl=en&gl=IE&mapclient=embed&saddr=Dublin&daddr=St%20Josephs%27%20Church%20Cooneen%2C%20Fivemiletown%20BT75%200AJ%2C%20United%20Kingdom&dirflg=d", text: "Open in Maps" %>
+      </header>
+      <iframe class="w-full aspect-[1/1]" src="https://www.google.com/maps/embed?pb=!1m34!1m12!1m3!1d188431.39095810577!2d-7.398650065382103!3d54.16764119108856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m19!3e0!4m5!1s0x48670e80ea27ac2f%3A0xa00c7a9973171a0!2sDublin!3m2!1d53.3498053!2d-6.2603097!4m5!1s0x485e3934480dd72b%3A0xa0f3fb539ae2420!2sMaguiresbridge%2C%20Enniskillen%2C%20UK!3m2!1d54.29513!2d-7.46509!4m5!1s0x485e24c17be453e5%3A0x96ed52416fa38597!2sSt%20Josephs&#39;%20Church%20Cooneen%2C%20Fivemiletown%20BT75%200AJ%2C%20United%20Kingdom!3m2!1d54.328283!2d-7.295727599999999!5e1!3m2!1sen!2sie!4v1679494872235!5m2!1sen!2sie" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+      <p class="pt-4 text-base leading-7">Google might suggest some quicker routes, but going via Maguiresbridge but it's a much better road than going via Aghadrumsee.</p>
+    </li>
+  </ul>
+</section>
+
+<%= render "components/next_three_games" %>
+<%= render "components/page_of_photos" %>

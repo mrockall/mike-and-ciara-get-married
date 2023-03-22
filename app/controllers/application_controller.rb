@@ -23,6 +23,10 @@ class ApplicationController < ActionController::Base
     @page_title = "RSVP"
   end
 
+  def change_of_chapel
+    @page_title = "Change of Chapel"
+  end
+
   private
 
   def pass_the_session_id_to_the_view

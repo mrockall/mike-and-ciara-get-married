@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'where-to-stay', to: 'application#where_to_stay'
   get 'hair-and-make-up', to: 'application#hair_and_make_up'
   get 'rsvp', to: 'application#rsvp'
+  get 'change-of-chapel', to: 'application#change_of_chapel'
 
   get 'games', to: 'games#index'
   get 'games/leaderboard', to: 'games#leaderboard'
